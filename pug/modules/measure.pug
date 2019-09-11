@@ -1,0 +1,18 @@
+.modal_measure.modal.fade(tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content
+            button.close-popup(type="button" data-dismiss="modal" aria-label="Close")
+            .modal-body
+                p Запишитесь на бесплатный замер!
+                p.desc В течении 15 минут с Вами свяжется наш специалист для уточнения деталей!
+                form
+                    input(type="text" placeholder="Ваше имя...")
+                    .telephones
+                        input(type="text" placeholder="Ваш телефон...")
+                    textarea
+                    .d-flex.flex-column.align-items-center
+                        span.dop Добавить комментарий
+                    input(type="submit" value="Записать меня на замер!")
+                    .d-flex.justify-content-center
+                        label.personal Согласие на обработку персональных данных
+                            input(type="checkbox" checked="checked")

@@ -1,0 +1,2766 @@
+doctype html
+html(lang="ru-RU")
+    head
+        include modules/head.pug
+
+    body
+
+        include modules/consultation.pug
+        include modules/request.pug
+        include modules/measure.pug
+        include modules/mobile_menu.pug
+
+        //header(style="background-image: url('img/bg-1.png')")
+        //img(src="img/header__logo.png" alt="Reynaers aluminium")
+
+        .measure(style="background-image: url('img/measure.png')" data-toggle="modal" data-target=".modal_measure")
+            p Запишись на<br>бесплатный<br>замер!
+
+        #hidden-block
+
+        header.header.block
+            .container
+                .logo
+                    a(href="https://www.oknastreet.ru/")
+                        svg#logotype.img-responsive(data-name="logo" xmlns="http://www.w3.org/2000/svg" width="225" viewBox="0 0 347.55 96.15")
+                            title Окна Стрит
+                            path.cls-1(d="M144.1,76.5a5.36,5.36,0,0,1-4.05-1.59,5.71,5.71,0,0,1-1.52-4.13,6,6,0,0,1,1.55-4.36,5.54,5.54,0,0,1,4.21-1.63,5.23,5.23,0,0,1,4,1.58,5.73,5.73,0,0,1,1.51,4.13,6.07,6.07,0,0,1-1.54,4.38A5.44,5.44,0,0,1,144.1,76.5Zm.09-10a3.3,3.3,0,0,0-2.62,1.16,4.49,4.49,0,0,0-1,3.05,4.54,4.54,0,0,0,1,3,3.21,3.21,0,0,0,2.56,1.15,3.36,3.36,0,0,0,2.65-1.1,4.47,4.47,0,0,0,1-3.07,4.69,4.69,0,0,0-.94-3.13A3.24,3.24,0,0,0,144.19,66.45Z")
+                            path.cls-1(d="M162.24,76.31h-2.53l-4.07-5.18a2.88,2.88,0,0,1-.28-.39h0v5.57h-1.94V65h1.94v5.32h0a2.57,2.57,0,0,1,.28-.39L159.56,65h2.33l-4.59,5.43Z")
+                            path.cls-1(d="M170.28,76.5a5.36,5.36,0,0,1-4.05-1.59,5.71,5.71,0,0,1-1.52-4.13,6,6,0,0,1,1.55-4.36,5.54,5.54,0,0,1,4.21-1.63,5.23,5.23,0,0,1,4,1.58,5.73,5.73,0,0,1,1.51,4.13,6.07,6.07,0,0,1-1.54,4.38A5.44,5.44,0,0,1,170.28,76.5Zm.09-10a3.3,3.3,0,0,0-2.62,1.16,4.49,4.49,0,0,0-1,3.05,4.54,4.54,0,0,0,1,3,3.21,3.21,0,0,0,2.56,1.15,3.36,3.36,0,0,0,2.65-1.1,4.47,4.47,0,0,0,1-3.07,4.69,4.69,0,0,0-.94-3.13A3.23,3.23,0,0,0,170.37,66.46Z")
+                            path.cls-1(d="M189.38,76.31h-2V71.4h-5.51v4.91H180V65h1.94v4.76h5.51V65h2Z")
+                            path.cls-1(d="M203.77,76.31h-2V71.4h-5.51v4.91h-1.94V65h1.94v4.76h5.51V65h2Z")
+                            path.cls-1(d="M218.56,76.31h-2.13l-1.05-2.88h-4.6l-1,2.88h-2.12L212,65h2.19Zm-3.7-4.41-1.62-4.51a5.23,5.23,0,0,1-.16-.71h0a4.54,4.54,0,0,1-.16.71l-1.61,4.51Z")
+                            path.cls-1(d="M229.44,76.4H227.5V71.77h-1.26a1.41,1.41,0,0,0-.85.26,3.06,3.06,0,0,0-.78,1.16l-1.39,3.2H221l1.72-3.6a3.82,3.82,0,0,1,.63-.88,2.37,2.37,0,0,1,1-.66v0a3.23,3.23,0,0,1-1.88-1,3,3,0,0,1,.45-4.24,4.61,4.61,0,0,1,2.94-.88h3.66Zm-1.94-6.14V66.62h-1.62a2.31,2.31,0,0,0-1.54.47,1.63,1.63,0,0,0-.55,1.32,1.69,1.69,0,0,0,.58,1.36,2.34,2.34,0,0,0,1.57.5Z")
+                            path.cls-1(d="M248.25,76.31h-2.53l-4.07-5.18a3.06,3.06,0,0,1-.28-.39h0v5.57H239.4V65h1.94v5.32h0a2.69,2.69,0,0,1,.28-.39L245.58,65h2.33l-4.59,5.43Z")
+                            path.cls-1(d="M256.18,76.5a5.35,5.35,0,0,1-4.05-1.59,5.71,5.71,0,0,1-1.52-4.13,6,6,0,0,1,1.55-4.36,5.54,5.54,0,0,1,4.21-1.63,5.23,5.23,0,0,1,4,1.58,5.73,5.73,0,0,1,1.51,4.13,6.06,6.06,0,0,1-1.54,4.38A5.44,5.44,0,0,1,256.18,76.5Zm.09-10a3.3,3.3,0,0,0-2.62,1.16,4.49,4.49,0,0,0-1,3.05,4.54,4.54,0,0,0,1,3,3.21,3.21,0,0,0,2.56,1.15,3.36,3.36,0,0,0,2.65-1.1,4.47,4.47,0,0,0,1-3.07,4.69,4.69,0,0,0-.94-3.13A3.24,3.24,0,0,0,256.27,66.46Z")
+                            path.cls-1(d="M278.77,76.31h-1.93V69q0-.9.12-2.2h0a7.56,7.56,0,0,1-.32,1.07l-3.49,8.46h-1.34l-3.5-8.4a7.68,7.68,0,0,1-.31-1.13h0q.07.68.06,2.22v7.31H266.2V65h2.73L272,72.53a11,11,0,0,1,.46,1.29h0q.3-.89.49-1.33l3.13-7.5h2.64Z")
+                            path.cls-1(d="M292.92,76.31h-2V66.68h-5.55v9.63h-1.94V65h9.44Z")
+                            path.cls-1(d="M307.69,76.4h-2.13l-1.05-2.88h-4.6l-1,2.88h-2.12l4.38-11.31h2.19ZM304,72l-1.62-4.51a5.21,5.21,0,0,1-.16-.71h0a4.55,4.55,0,0,1-.16.71L300.41,72Z")
+                            path.cls-1(d="M320.07,76.31h-2V71.4h-5.51v4.91h-1.94V65h1.94v4.76h5.51V65h2Z")
+                            path.cls-1(d="M335.62,76.31h-1.87V68.78a8.65,8.65,0,0,1,.08-1.44h0a3.29,3.29,0,0,1-.34.65l-5.62,8.32H325.7V65h1.88v7.2a12.23,12.23,0,0,1-.06,1.62h0a6.25,6.25,0,0,1,.42-.69L333.39,65h2.24Z")
+                            path.cls-1(d="M347.55,76.31h-1.94V71.69h-1.26a1.41,1.41,0,0,0-.85.26,3,3,0,0,0-.78,1.16l-1.39,3.2h-2.27l1.72-3.6a3.86,3.86,0,0,1,.62-.88,2.39,2.39,0,0,1,1-.66v0a3.23,3.23,0,0,1-1.88-1,3,3,0,0,1,.44-4.24A4.62,4.62,0,0,1,343.9,65h3.66Zm-1.94-6.14V66.54H344a2.31,2.31,0,0,0-1.54.47,1.63,1.63,0,0,0-.55,1.32,1.69,1.69,0,0,0,.58,1.36,2.34,2.34,0,0,0,1.57.5Z")
+                            path.cls-2(d="M150.18,49.8A13,13,0,0,1,140,45.48q-3.83-4.32-3.83-11.25,0-7.44,3.91-11.87t10.61-4.43a12.68,12.68,0,0,1,10,4.3q3.79,4.3,3.79,11.25,0,7.55-3.88,11.94A13.17,13.17,0,0,1,150.18,49.8Zm.23-27.38a8.06,8.06,0,0,0-6.59,3.16,12.9,12.9,0,0,0-2.54,8.32,13,13,0,0,0,2.47,8.28,7.82,7.82,0,0,0,6.45,3.14,8.17,8.17,0,0,0,6.68-3q2.45-3,2.45-8.37,0-5.53-2.37-8.54A7.88,7.88,0,0,0,150.4,22.42Z")
+                            path.cls-2(d="M188.66,49.28h-6.18l-8.33-10.73h-.08V49.28h-4.88v-22h4.88V37.39h.08L182,27.26H188l-8.92,10.5Z")
+                            path.cls-2(d="M209,49.28h-4.79V39.65H195v9.64h-4.79v-22H195v8.65h9.17V27.26H209Z")
+                            path.cls-2(d="M231.57,49.28h-4.93V45.84h-.09a7.45,7.45,0,0,1-6.82,4A7.27,7.27,0,0,1,214.55,48a6.11,6.11,0,0,1-1.87-4.67q0-6.24,7.32-7.27l6.66-.92q0-4.71-4.56-4.71a11,11,0,0,0-7.23,2.71V28.81a16,16,0,0,1,8.2-2.06q8.51,0,8.51,8.22Zm-4.91-10.82-4.71.64a7.58,7.58,0,0,0-3.3,1,3,3,0,0,0-1.11,2.68,2.9,2.9,0,0,0,1,2.29,4,4,0,0,0,2.73.89,5.08,5.08,0,0,0,3.85-1.6,5.62,5.62,0,0,0,1.52-4Z")
+                            path.cls-3(d="M264.34,48.12a19.2,19.2,0,0,1-8.8,1.81q-6.81,0-10.91-4.24t-4.1-11.12q0-7.4,4.62-12A15.92,15.92,0,0,1,256.81,18a19.37,19.37,0,0,1,7.53,1.27v5.08a13.6,13.6,0,0,0-7-1.85,11,11,0,0,0-8.24,3.21A11.67,11.67,0,0,0,246,34.31a11.13,11.13,0,0,0,2.95,8.12,10.33,10.33,0,0,0,7.75,3,14,14,0,0,0,7.68-2.06Z")
+                            path.cls-3(d="M281.33,31.36h-6.17v18h-4.92v-18H264v-4h17.29Z")
+                            path.cls-3(d="M347.55,31.36h-6.17v18h-4.92v-18h-6.21v-4h17.29Z")
+                            path.cls-3(d="M289.08,46.16H289V59.54h-4.89V27.38H289v3.87h.08a8,8,0,0,1,7.33-4.39,7.66,7.66,0,0,1,6.41,2.95,12.54,12.54,0,0,1,2.3,7.91,13.92,13.92,0,0,1-2.59,8.82,8.5,8.5,0,0,1-7.08,3.31A7,7,0,0,1,289.08,46.16ZM289,37.47V40.2a5.89,5.89,0,0,0,1.51,4.09A4.91,4.91,0,0,0,294.29,46a5,5,0,0,0,4.26-2.16,10.22,10.22,0,0,0,1.55-6,8.05,8.05,0,0,0-1.44-5.09,4.71,4.71,0,0,0-3.91-1.84,5.21,5.21,0,0,0-4.2,1.89A7.1,7.1,0,0,0,289,37.47Z")
+                            path.cls-3(d="M327.67,49.41h-4.43V33.26q-.42.86-1.29,2.39l-9.09,13.77H308v-22h4.49V43.21c.15-.37.49-1,1-1.94l9.22-13.89h4.92Z")
+                            path.cls-3(d="M33.87,6.61a2.53,2.53,0,1,1,0-5.05h57.9A2.53,2.53,0,0,1,94.3,4.09V58.2a2.53,2.53,0,1,1-5.05,0V6.61Z")
+                            path.cls-3(d="M91.78,62.28a4.09,4.09,0,0,1-4.09-4.09v-50H33.87a4.09,4.09,0,0,1,0-8.18h57.9a4.09,4.09,0,0,1,4.09,4.09V58.19A4.09,4.09,0,0,1,91.78,62.28ZM33.87,3.13a1,1,0,0,0,0,1.92H90.82V58.19a1,1,0,1,0,1.92,0V4.09a1,1,0,0,0-1-1Z")
+                            path.cls-4(d="M15.56,24.67a2.53,2.53,0,1,1,0-5.05h57.9A2.53,2.53,0,0,1,76,22.15V76.25a2.53,2.53,0,1,1-5.05,0V24.67Z")
+                            path.cls-4(d="M73.47,80.34a4.09,4.09,0,0,1-4.09-4.09v-50H15.56a4.09,4.09,0,1,1,0-8.18h57.9a4.09,4.09,0,0,1,4.09,4.09V76.25A4.09,4.09,0,0,1,73.47,80.34ZM15.56,21.19a1,1,0,1,0,0,1.92H72.5V76.25a1,1,0,1,0,1.92,0V22.15a1,1,0,0,0-1-1Z")
+                            path.cls-4(d="M62,89.54a2.53,2.53,0,1,1,0,5.05H4.09a2.53,2.53,0,0,1-2.53-2.53V38a2.53,2.53,0,0,1,5.05,0V89.54Z")
+                            path.cls-4(d="M62,96.15H4.09A4.09,4.09,0,0,1,0,92.07V38a4.09,4.09,0,1,1,8.18,0V88H62a4.09,4.09,0,0,1,0,8.18ZM4.09,37a1,1,0,0,0-1,1V92.07a1,1,0,0,0,1,1H62a1,1,0,0,0,0-1.92H5.05V38A1,1,0,0,0,4.09,37Z")
+                            path.cls-3(d="M60.73,61.48a1.77,1.77,0,0,1,0,3.54h-27a1.77,1.77,0,0,1-1.77-1.77V37a1.77,1.77,0,1,1,3.54,0V61.48Z")
+                            path.cls-3(d="M60.73,65.79h-27a2.55,2.55,0,0,1-2.55-2.55V37a2.55,2.55,0,0,1,5.1,0V60.7H60.73a2.55,2.55,0,1,1,0,5.1Zm-27-29.74a1,1,0,0,0-1,1V63.24a1,1,0,0,0,1,1h27a1,1,0,0,0,0-2h-26V37A1,1,0,0,0,33.71,36.05Z")
+
+
+                a.btn.btn-gager( title="Вызов замерщика" data-toggle="modal" data-target=".modal_measure") Вызвать замерщика
+                .opening
+                    .opening-hours
+                        |9
+                        sup 00
+                        |- 21
+                        sup 00
+                    .opening-daily Без выходных
+                //a.mail-director(href="kontaktyi/pismo-gendirektoru.html") Написать директору
+                a.login(href="http://oknastreet.darwinpro.org/client/login/" rel="nofollow" target="_blank") Вход в личный кабинет
+                .callback
+                    .callback-phone 8 (495) 215-15-95
+                    button.callback-btn(type="button" data-toggle="modal" data-target=".modal_consultation") Заказать обратный звонок
+                .messangers
+                    a.whatsapp(href="https://api.whatsapp.com/send?phone=74952151595" target="_blank" rel="nofollow")
+                        svg#whats-app(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve")
+                            path#WhatsApp(d="M90,43.841c0,24.213-19.779,43.841-44.182,43.841c-7.747,0-15.025-1.98-21.357-5.455L0,90l7.975-23.522   c-4.023-6.606-6.34-14.354-6.34-22.637C1.635,19.628,21.416,0,45.818,0C70.223,0,90,19.628,90,43.841z M45.818,6.982   c-20.484,0-37.146,16.535-37.146,36.859c0,8.065,2.629,15.534,7.076,21.61L11.107,79.14l14.275-4.537   c5.865,3.851,12.891,6.097,20.437,6.097c20.481,0,37.146-16.533,37.146-36.857S66.301,6.982,45.818,6.982z M68.129,53.938   c-0.273-0.447-0.994-0.717-2.076-1.254c-1.084-0.537-6.41-3.138-7.4-3.495c-0.993-0.358-1.717-0.538-2.438,0.537   c-0.721,1.076-2.797,3.495-3.43,4.212c-0.632,0.719-1.263,0.809-2.347,0.271c-1.082-0.537-4.571-1.673-8.708-5.333   c-3.219-2.848-5.393-6.364-6.025-7.441c-0.631-1.075-0.066-1.656,0.475-2.191c0.488-0.482,1.084-1.255,1.625-1.882   c0.543-0.628,0.723-1.075,1.082-1.793c0.363-0.717,0.182-1.344-0.09-1.883c-0.27-0.537-2.438-5.825-3.34-7.977   c-0.902-2.15-1.803-1.792-2.436-1.792c-0.631,0-1.354-0.09-2.076-0.09c-0.722,0-1.896,0.269-2.889,1.344   c-0.992,1.076-3.789,3.676-3.789,8.963c0,5.288,3.879,10.397,4.422,11.113c0.541,0.716,7.49,11.92,18.5,16.223   C58.2,65.771,58.2,64.336,60.186,64.156c1.984-0.179,6.406-2.599,7.312-5.107C68.398,56.537,68.398,54.386,68.129,53.938z" fill="#7db155")
+
+
+
+
+
+
+
+        nav.topmenu.block
+            .container
+                .mobile-menu
+                    |Меню
+                    span.menu-icon
+                        span
+                        //span
+                        //span
+                ul.menu
+                    li.first
+                        a(href="https://www.oknastreet.ru/") Главная
+                    li
+                        a(href="o-kompanii.html") О компании
+                    li
+                        a(href="proizvodstvo.html") Производство
+                    li
+                        a(href="fotogalereya/video.html") Наши работы
+                    li
+                        a(href="poleznyie-stati.html") Статьи
+                    li
+                        a.sales(href="akcii-skidki.html") Акции, скидки
+                    li.last
+                        a(href="kontaktyi.html") Контакты
+
+
+
+
+        div(style="clear:both;")
+
+        .banner.owl-carousel.owl-theme
+            .container-fluid.item.day(style="background-image: url('img/banner_day.png')")
+                .container
+                    .row
+                        .col-md-auto.col-12.offset-lg-1.offset-0
+                            h1
+                                | Пластиковые окна
+                                br
+                                span от производителя
+                            h2
+                                | -40%
+                                br
+                                span На окна Rehau
+                                .action
+                                    | Акция
+                                    br
+                                    | в июле
+                            button(type="button" title="Рассчитать со скидкой 40%" data-toggle="modal" data-target=".modal_measure") Рассчитать со скидкой 40%
+            .container-fluid.item.night(style="background-image: url('img/banner_night.png')")
+                .container
+                    .row
+                        .col-md-auto.col-12.offset-lg-6.offset-md-5
+                            h1
+                                | Пластиковые окна под ключ
+                                br
+                                span со скидкой 40%
+                            p при заказе вечером или ночью
+                            h2
+                                span 8 900 р.
+                                br
+                                | 4 990 р.
+                            button(type="button" title="Получить скидку 40%" data-toggle="modal" data-target=".modal_measure") Получить скидку 40%
+
+
+        .principles
+            .container
+                .row.d-flex.flex-column
+                    .col-12
+                        h2 Наши принципы
+                    .d-flex.justify-content-lg-between.flex-wrap.justify-content-md-around
+                        .col-6.col-md-4.mb-5.mb-lg-0.col-lg-auto
+                            img(src='img/principles_1.svg' height="65px")
+                            p Качество
+                                br
+                                |на 1-м месте
+                        .col-xl-auto.sep
+                        .col-6.col-md-4.mb-5.mb-lg-0.col-lg-auto
+                            img(src='img/principles_2.svg' height="65px")
+                            p Цены от
+                                br
+                                | производителя
+                        .col-xl-auto.sep
+                        .col-6.col-md-4.mb-5.mb-lg-0.col-lg-auto
+                            img(src='img/principles_3.svg' height="65px")
+                            p Чистый монтаж
+                                br
+                                | без мусора
+                        .col-xl-auto.sep
+                        .col-6.col-md-4.mb-5.mb-lg-0.col-lg-auto
+                            img(src='img/principles_4.svg' height="65px")
+                            p Работы под ключ
+                                br
+                                | без недоделок
+                        .col-xl-auto.sep
+                        .col-6.col-md-4.mb-5.mb-lg-0.col-lg-auto
+                            img(src='img/principles_5.svg' height="65px")
+                            p Гарантия 5 лет
+
+
+
+
+
+        .standart_prices(style="background-image: url('img/bg_standart_prices.png')")
+            .container
+                .row
+                    .col-12
+                        h2 Цены на окна стандартных размеров
+                        .second-header.d-flex.align-items-center.justify-content-center(style="background-image: url('img/bg_header_standart_prices.png')") Сроки изготовления всего 5 дней!
+                    .col-12
+                        ul.nav.nav-tabs.d-flex.justify-content-around
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#tab_prices_1") Blitz New
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_prices_2") Euro
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_prices_3") Grazio
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_prices_4") Delight
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_prices_5") Brillant
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_prices_6") Geneo
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_prices_7") Intelio
+                .row.tab-content
+                    .col-12.flex-wrap#tab_prices_1.tab-pane.active
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img1.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Одностворчатое окно
+                            span 4 143 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img2.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Двухстворчатое окно
+                            span 8 321 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img3.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Трехстворчатое окно
+                            span 10 764 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.d-flex.flex-column.justify-content-between.position-relative
+                            .img
+                                img(src='img/standart_prices_img4.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            div
+                                p Балконный блок
+                                span 12 142 руб.
+                    .col-12.flex-wrap#tab_prices_2.tab-pane.fade
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img1.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Одностворчатое окно
+                            span 5 143 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img2.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Двухстворчатое окно
+                            span 9 321 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img3.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Трехстворчатое окно
+                            span 11 764 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.d-flex.flex-column.justify-content-between.position-relative
+                            .img
+                                img(src='img/standart_prices_img4.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            div
+                                p Балконный блок
+                                span 13 142 руб.
+                    .col-12.flex-wrap#tab_prices_3.tab-pane.fade
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img1.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Одностворчатое окно
+                            span 6 143 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img2.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Двухстворчатое окно
+                            span 10 321 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img3.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Трехстворчатое окно
+                            span 12 764 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.d-flex.flex-column.justify-content-between.position-relative
+                            .img
+                                img(src='img/standart_prices_img4.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            div
+                                p Балконный блок
+                                span 14 142 руб.
+                    .col-12.flex-wrap#tab_prices_4.tab-pane.fade
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img1.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Одностворчатое окно
+                            span 7 143 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img2.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Двухстворчатое окно
+                            span 11 321 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img3.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Трехстворчатое окно
+                            span 13 764 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.d-flex.flex-column.justify-content-between.position-relative
+                            .img
+                                img(src='img/standart_prices_img4.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            div
+                                p Балконный блок
+                                span 15 142 руб.
+                    .col-12.flex-wrap#tab_prices_5.tab-pane.fade
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img1.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Одностворчатое окно
+                            span 8 143 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img2.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Двухстворчатое окно
+                            span 12 321 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img3.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Трехстворчатое окно
+                            span 14 764 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.d-flex.flex-column.justify-content-between.position-relative
+                            .img
+                                img(src='img/standart_prices_img4.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            div
+                                p Балконный блок
+                                span 16 142 руб.
+                    .col-12.flex-wrap#tab_prices_6.tab-pane.fade
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img1.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Одностворчатое окно
+                            span 9 143 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img2.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Двухстворчатое окно
+                            span 13 321 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img3.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Трехстворчатое окно
+                            span 15 764 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.d-flex.flex-column.justify-content-between.position-relative
+                            .img
+                                img(src='img/standart_prices_img4.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            div
+                                p Балконный блок
+                                span 17 142 руб.
+                    .col-12.flex-wrap#tab_prices_7.tab-pane.fade
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img1.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Одностворчатое окно
+                            span 10 143 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-xl-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img2.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Двухстворчатое окно
+                            span 14 321 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.position-relative
+                            .img
+                                img(src='img/standart_prices_img3.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            p Трехстворчатое окно
+                            span 16 764 руб.
+                        .col-xl-auto.col-md-6.col-12.mb-5.mb-md-0.d-flex.flex-column.justify-content-between.position-relative
+                            .img
+                                img(src='img/standart_prices_img4.png')
+                                .sizing
+                                    p Размер: 1300 х 1500 мм
+                                    span (ширина х высота)
+                            div
+                                p Балконный блок
+                                span 18 142 руб.
+                .row
+                    .col-12.info.d-flex.justify-content-center
+                        .in_cost
+                            p Что входит в стоимость?
+                            div
+                                p Окно:
+                                    span  из профиля Rehau
+                                p Стеклопакет:
+                                    span  двухкамерный
+                                p Фурнитура:
+                                    span  ROTO
+                                p Цвет:
+                                    span  белый
+                                p Подоконник:
+                                    span  ПВХ, белый
+                        div
+                        .more
+                            p Что может еще понадобиться?
+                            div
+                                p Отделка откосов:
+                                    span  +1 700 руб.
+                                p Вентиляционный клапан:
+                                    span  +1 450 руб.
+                                p Москитная сетка:
+                                    span  +430 руб.
+                                p Монтажные работы:
+                                    span  +1780 руб.
+        .steps(style="background-image: url('img/bg_steps.png')")
+            .container
+                .row
+                    .col-auto.offset-lg-2.d-flex.flex-column
+                        h2
+                            |Какие пластиковые окна
+                            br
+                            span подойдут именно вам?
+                        p Подбор окон online! 5 простых шагов
+                    .col-auto.offset-lg-1.position-relative
+                        img(src='img/steps_window.png' height="315px")
+
+
+
+        .category_steps
+            .container
+                .row
+                    .badge(style="background-image: url('img/steps_badge.png')")
+                        | 1
+                    .col-12
+                        h2 Выберите один из профилей Rehau
+                    .col-12
+                        ul.nav.nav-tabs.d-flex.justify-content-between
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#tab_category_profile_1") Blitz New
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_profile_2") Euro
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_profile_3") Grazio
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_profile_4") Delight
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_profile_5") Brillant
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_profile_6") Geneo
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_profile_7") Intelio
+                    .tab-content.col-12
+                        #tab_category_profile_1.tab-pane.active.col-12.p-0.flex-wrap
+                            .col-md-6.col-12.position-relative.d-flex.align-items-center.justify-content-start
+                                .price(style="background-image: url('img/orange.png')")
+                                    p
+                                        | 3 714
+                                        br
+                                        span руб/м²
+                                img(src='img/category_profile1.png')
+                            .col-md-6.col-12.text-left
+                                h3.i1 Ключевое преимущество Blitz New
+                                p Недорогие, универсальные окна. Экономия на остеклении.
+                                h3.i2 Технические характеристики:
+                                ul.specifications
+                                    li Системная глубина: 60 мм
+                                    li Воздушные камеры: 3 шт.
+                                    li Толщина стеклопакета: 32 мм
+                                    li Теплоизоляция: 0,63 м² * С/Вт
+                                    li Звукоизоляция: 25 дБ
+                                .compare
+                                    p Сравнить с другими профилями Rehau
+                                    table
+                                        tbody
+                                            tr
+                                                td
+                                                    p Характеристика
+                                                td
+                                                    p(style="color: #ff9c00;") Blitz New
+                                                td
+                                                    p Euro
+                                                td
+                                                    p Grazio
+                                                td
+                                                    p Delight
+                                                td
+                                                    p Brillant
+                                                td
+                                                    p Geneo
+                                                td
+                                                    p Intelio
+                                            tr
+                                                td
+                                                    p Системная глубина, мм
+                                                td
+                                                    p(style="color: #ff9c00;") 60
+                                                td
+                                                    p 60
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70 (80)
+                                                td
+                                                    p 86
+                                                td
+                                                    p 80
+                                            tr
+                                                td
+                                                    p Количество воздушных камер
+                                                td
+                                                    p(style="color: #ff9c00;") 3
+                                                td
+                                                    p 3
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5 (6)
+                                                td
+                                                    p 6
+                                                td
+                                                    p 6
+                                            tr
+                                                td
+                                                    p Толщина стеклопакета, мм
+                                                td
+                                                    p(style="color: #ff9c00;") 32
+                                                td
+                                                    p 32
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 52
+                                                td
+                                                    p 52
+                                            tr
+                                                td
+                                                    p Коэффициент теплоизоляции, м² с/вт
+                                                td
+                                                    p(style="color: #ff9c00;") 0,63
+                                                td
+                                                    p 0,64
+                                                td
+                                                    p 0,85
+                                                td
+                                                    p 0,8
+                                                td
+                                                    p 0,79
+                                                td
+                                                    p 1,05
+                                                td
+                                                    p 0,98
+                                h3.i3 Рекомендуем при:
+                                p Остекление балконов и лоджий; дачных домиков; веранд, террас и других пристроек; бани, беседки, хоз.постройки и пр.
+                                a.button(title="Рассчитать со скидкой 40%" href="#target_calc") Рассчитать со скидкой 40%
+                        #tab_category_profile_2.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-md-6.col-12.position-relative.d-flex.align-items-center.justify-content-start
+                                .price(style="background-image: url('img/orange.png')")
+                                    p
+                                        | 3 714
+                                        br
+                                        span руб/м²
+                                img(src='img/category_profile2.png')
+                            .col-md-6.col-12.text-left
+                                h3.i1 Ключевое преимущество Blitz New
+                                p Недорогие, универсальные окна. Экономия на остеклении.
+                                h3.i2 Технические характеристики:
+                                ul.specifications
+                                    li Системная глубина: 60 мм
+                                    li Воздушные камеры: 3 шт.
+                                    li Толщина стеклопакета: 32 мм
+                                    li Теплоизоляция: 0,63 м² * С/Вт
+                                    li Звукоизоляция: 25 дБ
+                                .compare
+                                    p Сравнить с другими профилями Rehau
+                                    table
+                                        tbody
+                                            tr
+                                                td
+                                                    p Характеристика
+                                                td
+                                                    p Blitz New
+                                                td
+                                                    p(style="color: #ff9c00;") Euro
+                                                td
+                                                    p Grazio
+                                                td
+                                                    p Delight
+                                                td
+                                                    p Brillant
+                                                td
+                                                    p Geneo
+                                                td
+                                                    p Intelio
+                                            tr
+                                                td
+                                                    p Системная глубина, мм
+                                                td
+                                                    p 60
+                                                td
+                                                    p(style="color: #ff9c00;") 60
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70 (80)
+                                                td
+                                                    p 86
+                                                td
+                                                    p 80
+                                            tr
+                                                td
+                                                    p Количество воздушных камер
+                                                td
+                                                    p 3
+                                                td
+                                                    p(style="color: #ff9c00;") 3
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5 (6)
+                                                td
+                                                    p 6
+                                                td
+                                                    p 6
+                                            tr
+                                                td
+                                                    p Толщина стеклопакета, мм
+                                                td
+                                                    p 32
+                                                td
+                                                    p(style="color: #ff9c00;") 32
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 52
+                                                td
+                                                    p 52
+                                            tr
+                                                td
+                                                    p Коэффициент теплоизоляции, м² с/вт
+                                                td
+                                                    p 0,63
+                                                td
+                                                    p(style="color: #ff9c00;") 0,64
+                                                td
+                                                    p 0,85
+                                                td
+                                                    p 0,8
+                                                td
+                                                    p 0,79
+                                                td
+                                                    p 1,05
+                                                td
+                                                    p 0,98
+                                h3.i3 Рекомендуем при:
+                                p Остекление балконов и лоджий; дачных домиков; веранд, террас и других пристроек; бани, беседки, хоз.постройки и пр.
+                                a.button(title="Рассчитать со скидкой 40%" href="#target_calc") Рассчитать со скидкой 40%
+                        #tab_category_profile_3.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-md-6.col-12.position-relative.d-flex.align-items-center.justify-content-start
+                                .price(style="background-image: url('img/orange.png')")
+                                    p
+                                        | 3 714
+                                        br
+                                        span руб/м²
+                                img(src='img/category_profile3.png')
+                            .col-md-6.col-12.text-left
+                                h3.i1 Ключевое преимущество Blitz New
+                                p Недорогие, универсальные окна. Экономия на остеклении.
+                                h3.i2 Технические характеристики:
+                                ul.specifications
+                                    li Системная глубина: 60 мм
+                                    li Воздушные камеры: 3 шт.
+                                    li Толщина стеклопакета: 32 мм
+                                    li Теплоизоляция: 0,63 м² * С/Вт
+                                    li Звукоизоляция: 25 дБ
+                                .compare
+                                    p Сравнить с другими профилями Rehau
+                                    table
+                                        tbody
+                                            tr
+                                                td
+                                                    p Характеристика
+                                                td
+                                                    p Blitz New
+                                                td
+                                                    p Euro
+                                                td
+                                                    p(style="color: #ff9c00;") Grazio
+                                                td
+                                                    p Delight
+                                                td
+                                                    p Brillant
+                                                td
+                                                    p Geneo
+                                                td
+                                                    p Intelio
+                                            tr
+                                                td
+                                                    p Системная глубина, мм
+                                                td
+                                                    p 60
+                                                td
+                                                    p 60
+                                                td
+                                                    p(style="color: #ff9c00;") 70
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70 (80)
+                                                td
+                                                    p 86
+                                                td
+                                                    p 80
+                                            tr
+                                                td
+                                                    p Количество воздушных камер
+                                                td
+                                                    p 3
+                                                td
+                                                    p 3
+                                                td
+                                                    p(style="color: #ff9c00;") 5
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5 (6)
+                                                td
+                                                    p 6
+                                                td
+                                                    p 6
+                                            tr
+                                                td
+                                                    p Толщина стеклопакета, мм
+                                                td
+                                                    p 32
+                                                td
+                                                    p 32
+                                                td
+                                                    p(style="color: #ff9c00;") 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 52
+                                                td
+                                                    p 52
+                                            tr
+                                                td
+                                                    p Коэффициент теплоизоляции, м² с/вт
+                                                td
+                                                    p 0,63
+                                                td
+                                                    p 0,64
+                                                td
+                                                    p(style="color: #ff9c00;") 0,85
+                                                td
+                                                    p 0,8
+                                                td
+                                                    p 0,79
+                                                td
+                                                    p 1,05
+                                                td
+                                                    p 0,98
+                                h3.i3 Рекомендуем при:
+                                p Остекление балконов и лоджий; дачных домиков; веранд, террас и других пристроек; бани, беседки, хоз.постройки и пр.
+                                a.button(title="Рассчитать со скидкой 40%" href="#target_calc") Рассчитать со скидкой 40%
+                        #tab_category_profile_4.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-md-6.col-12.position-relative.d-flex.align-items-center.justify-content-start
+                                .price(style="background-image: url('img/orange.png')")
+                                    p
+                                        | 3 714
+                                        br
+                                        span руб/м²
+                                img(src='img/category_profile4.png')
+                            .col-md-6.col-12.text-left
+                                h3.i1 Ключевое преимущество Blitz New
+                                p Недорогие, универсальные окна. Экономия на остеклении.
+                                h3.i2 Технические характеристики:
+                                ul.specifications
+                                    li Системная глубина: 60 мм
+                                    li Воздушные камеры: 3 шт.
+                                    li Толщина стеклопакета: 32 мм
+                                    li Теплоизоляция: 0,63 м² * С/Вт
+                                    li Звукоизоляция: 25 дБ
+                                .compare
+                                    p Сравнить с другими профилями Rehau
+                                    table
+                                        tbody
+                                            tr
+                                                td
+                                                    p Характеристика
+                                                td
+                                                    p Blitz New
+                                                td
+                                                    p Euro
+                                                td
+                                                    p Grazio
+                                                td
+                                                    p(style="color: #ff9c00;") Delight
+                                                td
+                                                    p Brillant
+                                                td
+                                                    p Geneo
+                                                td
+                                                    p Intelio
+                                            tr
+                                                td
+                                                    p Системная глубина, мм
+                                                td
+                                                    p 60
+                                                td
+                                                    p 60
+                                                td
+                                                    p 70
+                                                td
+                                                    p(style="color: #ff9c00;") 70
+                                                td
+                                                    p 70 (80)
+                                                td
+                                                    p 86
+                                                td
+                                                    p 80
+                                            tr
+                                                td
+                                                    p Количество воздушных камер
+                                                td
+                                                    p 3
+                                                td
+                                                    p 3
+                                                td
+                                                    p 5
+                                                td
+                                                    p(style="color: #ff9c00;") 5
+                                                td
+                                                    p 5 (6)
+                                                td
+                                                    p 6
+                                                td
+                                                    p 6
+                                            tr
+                                                td
+                                                    p Толщина стеклопакета, мм
+                                                td
+                                                    p 32
+                                                td
+                                                    p 32
+                                                td
+                                                    p 40
+                                                td
+                                                    p(style="color: #ff9c00;") 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 52
+                                                td
+                                                    p 52
+                                            tr
+                                                td
+                                                    p Коэффициент теплоизоляции, м² с/вт
+                                                td
+                                                    p 0,63
+                                                td
+                                                    p 0,64
+                                                td
+                                                    p 0,85
+                                                td
+                                                    p(style="color: #ff9c00;") 0,8
+                                                td
+                                                    p 0,79
+                                                td
+                                                    p 1,05
+                                                td
+                                                    p 0,98
+                                h3.i3 Рекомендуем при:
+                                p Остекление балконов и лоджий; дачных домиков; веранд, террас и других пристроек; бани, беседки, хоз.постройки и пр.
+                                a.button(title="Рассчитать со скидкой 40%" href="#target_calc") Рассчитать со скидкой 40%
+                        #tab_category_profile_5.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-md-6.col-12.position-relative.d-flex.align-items-center.justify-content-start
+                                .price(style="background-image: url('img/orange.png')")
+                                    p
+                                        | 3 714
+                                        br
+                                        span руб/м²
+                                img(src='img/category_profile5.png')
+                            .col-md-6.col-12.text-left
+                                h3.i1 Ключевое преимущество Blitz New
+                                p Недорогие, универсальные окна. Экономия на остеклении.
+                                h3.i2 Технические характеристики:
+                                ul.specifications
+                                    li Системная глубина: 60 мм
+                                    li Воздушные камеры: 3 шт.
+                                    li Толщина стеклопакета: 32 мм
+                                    li Теплоизоляция: 0,63 м² * С/Вт
+                                    li Звукоизоляция: 25 дБ
+                                .compare
+                                    p Сравнить с другими профилями Rehau
+                                    table
+                                        tbody
+                                            tr
+                                                td
+                                                    p Характеристика
+                                                td
+                                                    p Blitz New
+                                                td
+                                                    p Euro
+                                                td
+                                                    p Grazio
+                                                td
+                                                    p Delight
+                                                td
+                                                    p(style="color: #ff9c00;") Brillant
+                                                td
+                                                    p Geneo
+                                                td
+                                                    p Intelio
+                                            tr
+                                                td
+                                                    p Системная глубина, мм
+                                                td
+                                                    p 60
+                                                td
+                                                    p 60
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70
+                                                td
+                                                    p(style="color: #ff9c00;") 70 (80)
+                                                td
+                                                    p 86
+                                                td
+                                                    p 80
+                                            tr
+                                                td
+                                                    p Количество воздушных камер
+                                                td
+                                                    p 3
+                                                td
+                                                    p 3
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5
+                                                td
+                                                    p(style="color: #ff9c00;") 5 (6)
+                                                td
+                                                    p 6
+                                                td
+                                                    p 6
+                                            tr
+                                                td
+                                                    p Толщина стеклопакета, мм
+                                                td
+                                                    p 32
+                                                td
+                                                    p 32
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p(style="color: #ff9c00;") 40
+                                                td
+                                                    p 52
+                                                td
+                                                    p 52
+                                            tr
+                                                td
+                                                    p Коэффициент теплоизоляции, м² с/вт
+                                                td
+                                                    p 0,63
+                                                td
+                                                    p 0,64
+                                                td
+                                                    p 0,85
+                                                td
+                                                    p 0,8
+                                                td
+                                                    p(style="color: #ff9c00;") 0,79
+                                                td
+                                                    p 1,05
+                                                td
+                                                    p 0,98
+                                h3.i3 Рекомендуем при:
+                                p Остекление балконов и лоджий; дачных домиков; веранд, террас и других пристроек; бани, беседки, хоз.постройки и пр.
+                                a.button(title="Рассчитать со скидкой 40%" href="#target_calc") Рассчитать со скидкой 40%
+                        #tab_category_profile_6.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-md-6.col-12.position-relative.d-flex.align-items-center.justify-content-start
+                                .price(style="background-image: url('img/orange.png')")
+                                    p
+                                        | 3 714
+                                        br
+                                        span руб/м²
+                                img(src='img/category_profile6.png')
+                            .col-md-6.col-12.text-left
+                                h3.i1 Ключевое преимущество Blitz New
+                                p Недорогие, универсальные окна. Экономия на остеклении.
+                                h3.i2 Технические характеристики:
+                                ul.specifications
+                                    li Системная глубина: 60 мм
+                                    li Воздушные камеры: 3 шт.
+                                    li Толщина стеклопакета: 32 мм
+                                    li Теплоизоляция: 0,63 м² * С/Вт
+                                    li Звукоизоляция: 25 дБ
+                                .compare
+                                    p Сравнить с другими профилями Rehau
+                                    table
+                                        tbody
+                                            tr
+                                                td
+                                                    p Характеристика
+                                                td
+                                                    p Blitz New
+                                                td
+                                                    p Euro
+                                                td
+                                                    p Grazio
+                                                td
+                                                    p Delight
+                                                td
+                                                    p Brillant
+                                                td
+                                                    p(style="color: #ff9c00;") Geneo
+                                                td
+                                                    p Intelio
+                                            tr
+                                                td
+                                                    p Системная глубина, мм
+                                                td
+                                                    p 60
+                                                td
+                                                    p 60
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70 (80)
+                                                td
+                                                    p(style="color: #ff9c00;") 86
+                                                td
+                                                    p 80
+                                            tr
+                                                td
+                                                    p Количество воздушных камер
+                                                td
+                                                    p 3
+                                                td
+                                                    p 3
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5 (6)
+                                                td
+                                                    p(style="color: #ff9c00;") 6
+                                                td
+                                                    p 6
+                                            tr
+                                                td
+                                                    p Толщина стеклопакета, мм
+                                                td
+                                                    p 32
+                                                td
+                                                    p 32
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p(style="color: #ff9c00;") 52
+                                                td
+                                                    p 52
+                                            tr
+                                                td
+                                                    p Коэффициент теплоизоляции, м² с/вт
+                                                td
+                                                    p 0,63
+                                                td
+                                                    p 0,64
+                                                td
+                                                    p 0,85
+                                                td
+                                                    p 0,8
+                                                td
+                                                    p 0,79
+                                                td
+                                                    p(style="color: #ff9c00;") 1,05
+                                                td
+                                                    p 0,98
+                                h3.i3 Рекомендуем при:
+                                p Остекление балконов и лоджий; дачных домиков; веранд, террас и других пристроек; бани, беседки, хоз.постройки и пр.
+                                a.button(title="Рассчитать со скидкой 40%" href="#target_calc") Рассчитать со скидкой 40%
+                        #tab_category_profile_7.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-md-6.col-12.position-relative.d-flex.align-items-center.justify-content-start
+                                .price(style="background-image: url('img/orange.png')")
+                                    p
+                                        | 3 714
+                                        br
+                                        span руб/м²
+                                img(src='img/category_profile7.png')
+                            .col-md-6.col-12.text-left
+                                h3.i1 Ключевое преимущество Blitz New
+                                p Недорогие, универсальные окна. Экономия на остеклении.
+                                h3.i2 Технические характеристики:
+                                ul.specifications
+                                    li Системная глубина: 60 мм
+                                    li Воздушные камеры: 3 шт.
+                                    li Толщина стеклопакета: 32 мм
+                                    li Теплоизоляция: 0,63 м² * С/Вт
+                                    li Звукоизоляция: 25 дБ
+                                .compare
+                                    p Сравнить с другими профилями Rehau
+                                    table
+                                        tbody
+                                            tr
+                                                td
+                                                    p Характеристика
+                                                td
+                                                    p Blitz New
+                                                td
+                                                    p Euro
+                                                td
+                                                    p Grazio
+                                                td
+                                                    p Delight
+                                                td
+                                                    p Brillant
+                                                td
+                                                    p Geneo
+                                                td
+                                                    p(style="color: #ff9c00;") Intelio
+                                            tr
+                                                td
+                                                    p Системная глубина, мм
+                                                td
+                                                    p 60
+                                                td
+                                                    p 60
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70
+                                                td
+                                                    p 70 (80)
+                                                td
+                                                    p 86
+                                                td
+                                                    p(style="color: #ff9c00;") 80
+                                            tr
+                                                td
+                                                    p Количество воздушных камер
+                                                td
+                                                    p 3
+                                                td
+                                                    p 3
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5
+                                                td
+                                                    p 5 (6)
+                                                td
+                                                    p 6
+                                                td
+                                                    p(style="color: #ff9c00;") 6
+                                            tr
+                                                td
+                                                    p Толщина стеклопакета, мм
+                                                td
+                                                    p 32
+                                                td
+                                                    p 32
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 40
+                                                td
+                                                    p 52
+                                                td
+                                                    p(style="color: #ff9c00;") 52
+                                            tr
+                                                td
+                                                    p Коэффициент теплоизоляции, м² с/вт
+                                                td
+                                                    p 0,63
+                                                td
+                                                    p 0,64
+                                                td
+                                                    p 0,85
+                                                td
+                                                    p 0,8
+                                                td
+                                                    p 0,79
+                                                td
+                                                    p 1,05
+                                                td
+                                                    p(style="color: #ff9c00;") 0,98
+                                h3.i3 Рекомендуем при:
+                                p Остекление балконов и лоджий; дачных домиков; веранд, террас и других пристроек; бани, беседки, хоз.постройки и пр.
+                                a.button(title="Рассчитать со скидкой 40%" href="#target_calc") Рассчитать со скидкой 40%
+
+
+
+
+                .row.glazing
+                    .badge(style="background-image: url('img/steps_badge.png')")
+                        | 2
+                    .col-12
+                        h2 Выберите стеклопакет
+                    .col-12
+                        ul.nav.nav-tabs.d-flex.justify-content-between
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#tab_category_glazing_1") Однокамерный
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_glazing_2") Двухкамерный
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_glazing_3") Теплопакет
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_glazing_4") Энергосберегающий
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_glazing_5") Солнцезацитный
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_glazing_6") Шумоизоляционный
+                    .tab-content.col-12
+                        #tab_category_glazing_1.tab-pane.active.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12.position-relative.d-flex.align-items-center.justify-content-center
+                                img(src='img/category_glazing1.png')
+                            .col-lg-6.col-12.text-left
+                                h3.i2 Конструктивные особенности:
+                                ul.specifications
+                                    li Однокамерный стеклопакет состоит из двух
+                                        br
+                                        | герметично скрепленных между собой стекол.
+                                    li Между стеклами — дистанционная рамка с влагопоглотителем,
+                                        br
+                                        | который служит для удаления избыточной влаги внутри стеклопакета.
+                                    li Возможна установка стекол обычного качества М1, с напылением
+                                        br
+                                        | оксида серебра (i-стекло), тонированных, ударопрочных, цветных.
+                                h3.i3 Рекомендуем к установке:
+                                p В окна для дачи, бани, веранды, террасы, на балконы и лоджии.
+                                    br
+                                    | При установке окон в комнаты, примыкающие к остекленным балконам.
+                                button(type="button" title="Проконсультироваться со специалистом" data-toggle="modal" data-target=".modal_consultation") Проконсультироваться со специалистом
+                        #tab_category_glazing_2.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12.position-relative.d-flex.align-items-center.justify-content-center
+                                img(src='img/category_glazing2.png')
+                            .col-lg-6.col-12.text-left
+                                h3.i2 Конструктивные особенности:
+                                ul.specifications
+                                    li Однокамерный стеклопакет состоит из двух
+                                        br
+                                        | герметично скрепленных между собой стекол.
+                                    li Между стеклами — дистанционная рамка с влагопоглотителем,
+                                        br
+                                        | который служит для удаления избыточной влаги внутри стеклопакета.
+                                    li Возможна установка стекол обычного качества М1, с напылением
+                                        br
+                                        | оксида серебра (i-стекло), тонированных, ударопрочных, цветных.
+                                h3.i3 Рекомендуем к установке:
+                                p В окна для дачи, бани, веранды, террасы, на балконы и лоджии.
+                                    br
+                                    | При установке окон в комнаты, примыкающие к остекленным балконам.
+                                button(type="button" title="Проконсультироваться со специалистом" data-toggle="modal" data-target=".modal_consultation") Проконсультироваться со специалистом
+                        #tab_category_glazing_3.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12.position-relative.d-flex.align-items-center.justify-content-center
+                                img(src='img/category_glazing3.png')
+                            .col-lg-6.col-12.text-left
+                                h3.i2 Конструктивные особенности:
+                                ul.specifications
+                                    li Однокамерный стеклопакет состоит из двух
+                                        br
+                                        | герметично скрепленных между собой стекол.
+                                    li Между стеклами — дистанционная рамка с влагопоглотителем,
+                                        br
+                                        | который служит для удаления избыточной влаги внутри стеклопакета.
+                                    li Возможна установка стекол обычного качества М1, с напылением
+                                        br
+                                        | оксида серебра (i-стекло), тонированных, ударопрочных, цветных.
+                                h3.i3 Рекомендуем к установке:
+                                p В окна для дачи, бани, веранды, террасы, на балконы и лоджии.
+                                    br
+                                    | При установке окон в комнаты, примыкающие к остекленным балконам.
+                                button(type="button" title="Проконсультироваться со специалистом" data-toggle="modal" data-target=".modal_consultation") Проконсультироваться со специалистом
+                        #tab_category_glazing_4.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-xl-6.col-12.position-relative.d-flex.align-items-center.justify-content-center(style="background-image: url('img/category_glazing4.png')")
+                                img(src='img/category_glazing4.png')
+                            .col-xl-6.col-12.text-left
+                                h3.i2 Конструктивные особенности:
+                                ul.specifications
+                                    li Однокамерный стеклопакет состоит из двух
+                                        br
+                                        | герметично скрепленных между собой стекол.
+                                    li Между стеклами — дистанционная рамка с влагопоглотителем,
+                                        br
+                                        | который служит для удаления избыточной влаги внутри стеклопакета.
+                                    li Возможна установка стекол обычного качества М1, с напылением
+                                        br
+                                        | оксида серебра (i-стекло), тонированных, ударопрочных, цветных.
+                                h3.i3 Рекомендуем к установке:
+                                p В окна для дачи, бани, веранды, террасы, на балконы и лоджии.
+                                    br
+                                    | При установке окон в комнаты, примыкающие к остекленным балконам.
+                                button(type="button" title="Проконсультироваться со специалистом" data-toggle="modal" data-target=".modal_consultation") Проконсультироваться со специалистом
+                        #tab_category_glazing_5.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-xl-6.col-12.position-relative.d-flex.align-items-center.justify-content-center(style="background-image: url('img/category_glazing5.png')")
+                                img(src='img/category_glazing5.png')
+                            .col-xl-6.col-12.text-left
+                                h3.i2 Конструктивные особенности:
+                                ul.specifications
+                                    li Однокамерный стеклопакет состоит из двух
+                                        br
+                                        | герметично скрепленных между собой стекол.
+                                    li Между стеклами — дистанционная рамка с влагопоглотителем,
+                                        br
+                                        | который служит для удаления избыточной влаги внутри стеклопакета.
+                                    li Возможна установка стекол обычного качества М1, с напылением
+                                        br
+                                        | оксида серебра (i-стекло), тонированных, ударопрочных, цветных.
+                                h3.i3 Рекомендуем к установке:
+                                p В окна для дачи, бани, веранды, террасы, на балконы и лоджии.
+                                    br
+                                    | При установке окон в комнаты, примыкающие к остекленным балконам.
+                                button(type="button" title="Проконсультироваться со специалистом" data-toggle="modal" data-target=".modal_consultation") Проконсультироваться со специалистом
+                        #tab_category_glazing_6.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-xl-6.col-12.position-relative.d-flex.align-items-center.justify-content-center(style="background-image: url('img/category_glazing6.png')")
+                                img(src='img/category_glazing6.png')
+                            .col-xl-6.col-12.text-left
+                                h3.i2 Конструктивные особенности:
+                                ul.specifications
+                                    li Однокамерный стеклопакет состоит из двух
+                                        br
+                                        | герметично скрепленных между собой стекол.
+                                    li Между стеклами — дистанционная рамка с влагопоглотителем,
+                                        br
+                                        | который служит для удаления избыточной влаги внутри стеклопакета.
+                                    li Возможна установка стекол обычного качества М1, с напылением
+                                        br
+                                        | оксида серебра (i-стекло), тонированных, ударопрочных, цветных.
+                                h3.i3 Рекомендуем к установке:
+                                p В окна для дачи, бани, веранды, террасы, на балконы и лоджии.
+                                    br
+                                    | При установке окон в комнаты, примыкающие к остекленным балконам.
+                                button(type="button" title="Проконсультироваться со специалистом" data-toggle="modal" data-target=".modal_consultation") Проконсультироваться со специалистом
+
+
+
+
+                .row.sill
+                    .badge(style="background-image: url('img/steps_badge.png')")
+                        | 3
+                    .col-12
+                        h2 Выберите подоконник
+                    .col-12
+                        ul.nav.nav-tabs.d-flex.justify-content-between
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#tab_category_sill_1") ПВХ
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_sill_2") Деревянный
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_sill_3") Из искусственного камня
+                    .tab-content.col-12
+                        #tab_category_sill_1.tab-pane.active.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12(style="background-image: url('img/category_sill1.png')")
+                            .col-lg-6.col-12.text-left
+                                h3 Деревянные подоконники:
+                                p Vitrage (Россия), Moller (Германия)
+                                h3 Ключевые преимущества:
+                                p Доступность, долговечность, простой уход
+                                h3 Поверхность:
+                                p Матовая, глянцевая
+                                h3 Выбор цвета по каталогу:
+                                ul.d-flex.flex-wrap
+                                    li
+                                        img(src='img/sill_color1.png')
+                                    li
+                                        img(src='img/sill_color2.png')
+                                    li
+                                        img(src='img/sill_color3.png')
+                                    li
+                                        img(src='img/sill_color4.png')
+                                    li
+                                        img(src='img/sill_color5.png')
+                                    li
+                                        img(src='img/sill_color6.png')
+                                    li
+                                        img(src='img/sill_color7.png')
+                                    li
+                                        img(src='img/sill_color8.png')
+                                button(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+                        #tab_category_sill_2.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12(style="background-image: url('img/category_sill2.png')")
+                            .col-lg-6.col-12.text-left
+                                h3 Деревянные подоконники:
+                                p Vitrage (Россия), Moller (Германия)
+                                h3 Ключевые преимущества:
+                                p Доступность, долговечность, простой уход
+                                h3 Поверхность:
+                                p Матовая, глянцевая
+                                h3 Выбор цвета по каталогу:
+                                ul.d-flex.flex-wrap
+                                    li
+                                        img(src='img/sill_color9.png')
+                                    li
+                                        img(src='img/sill_color10.png')
+                                    li
+                                        img(src='img/sill_color11.png')
+                                    li
+                                        img(src='img/sill_color12.png')
+                                    li
+                                        img(src='img/sill_color13.png')
+                                    li
+                                        img(src='img/sill_color14.png')
+                                    li
+                                        img(src='img/sill_color15.png')
+                                    li
+                                        img(src='img/sill_color8.png')
+                                button(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+                        #tab_category_sill_3.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12(style="background-image: url('img/category_sill3.png')")
+                            .col-lg-6.col-12.text-left
+                                h3 Деревянные подоконники:
+                                p Vitrage (Россия), Moller (Германия)
+                                h3 Ключевые преимущества:
+                                p Доступность, долговечность, простой уход
+                                h3 Поверхность:
+                                p Матовая, глянцевая
+                                h3 Выбор цвета по каталогу:
+                                ul.d-flex.flex-wrap
+                                    li
+                                        img(src='img/sill_color9.png')
+                                    li
+                                        img(src='img/sill_color10.png')
+                                    li
+                                        img(src='img/sill_color11.png')
+                                    li
+                                        img(src='img/sill_color12.png')
+                                    li
+                                        img(src='img/sill_color13.png')
+                                    li
+                                        img(src='img/sill_color14.png')
+                                    li
+                                        img(src='img/sill_color15.png')
+                                    li
+                                        img(src='img/sill_color8.png')
+                                button(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+                .row.decor
+                    .badge(style="background-image: url('img/steps_badge.png')")
+                        | 4
+                    .col-12
+                        h2 Хотите яркие, необычные окна? Выберите оформление
+                    .col-12
+                        ul.nav.nav-tabs.d-flex.justify-content-between
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#tab_category_decor_1") Цветные окна
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_decor_2") Ламинация
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_decor_3") Ручки
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tab_category_decor_4") Декоративная раскладка
+                    .tab-content.col-12
+                        #tab_category_decor_1.tab-pane.active.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12.position-relative.d-flex.justify-content-start.tab-content
+                                #tab_colors_1.tab-pane.active
+                                    img(src='img/category_decor1.jpg')
+                                #tab_colors_2.tab-pane.fade
+                                    img(src='img/category_decor2.jpg')
+                                #tab_colors_3.tab-pane.fade
+                                    img(src='img/category_decor3.jpg')
+                                #tab_colors_4.tab-pane.fade
+                                    img(src='img/category_decor4.png')
+                                #tab_colors_5.tab-pane.fade
+                                    img(src='img/category_decor5.jpg')
+                                #tab_colors_6.tab-pane.fade
+                                    img(src='img/category_decor6.jpg')
+                                #tab_colors_7.tab-pane.fade
+                                    img(src='img/category_decor7.jpg')
+                                #tab_colors_8.tab-pane.fade
+                                    img(src='img/category_decor8.jpg')
+                                #tab_colors_9.tab-pane.fade
+                                    img(src='img/category_decor9.jpg')
+                                #tab_colors_10.tab-pane.fade
+                                    img(src='img/category_decor10.jpg')
+                                #tab_colors_11.tab-pane.fade
+                                    img(src='img/category_decor11.jpg')
+                                #tab_colors_12.tab-pane.fade
+                                    img(src='img/category_decor12.jpg')
+                            .col-lg-6.col-12.text-left
+                                .block
+                                    p Вы слышали о шкале RAL? Это палитра, состоящая из более, чем 150 оттенков! Выберите любой, и мы сделаем для вас цветные окна — с одной или с двух сторон!
+                                h3 Выберите мышью любой цвет
+                                ul.nav.nav-tabs.d-flex.flex-wrap.justify-content-between.color-tablist
+                                    li.nav-item
+                                        a.nav-link.active(data-toggle="tab" href="#tab_colors_1")
+                                            span.color.bg-a98956
+                                            span RAL 1001
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_2")
+                                            span.color.bg-cd6502
+                                            span RAL 1007
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_3")
+                                            span.color.bg-b98e04
+                                            span RAL 1012
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_4")
+                                            span.color.bg-d1cd23
+                                            span RAL 1016
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_5")
+                                            span.color.bg-df3514
+                                            span RAL 1001
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_6")
+                                            span.color.bg-9a0115
+                                            span RAL 3000
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_7")
+                                            span.color.bg-c68889
+                                            span RAL 3015
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_8")
+                                            span.color.bg-623b4e
+                                            span RAL 4001
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_9")
+                                            span.color.bg-65768a
+                                            span RAL 5014
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_10")
+                                            span.color.bg-2677ae
+                                            span RAL 5012
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_11")
+                                            span.color.bg-163f6b
+                                            span RAL 5005
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_colors_12")
+                                            span.color.bg-365d30
+                                            span RAL 6002
+                                button(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+                        #tab_category_decor_2.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12.position-relative.d-flex.justify-content-start.tab-content
+                                #tab_lamination_1.tab-pane.active
+                                    img(src='img/category_decor13.jpg')
+                                #tab_lamination_2.tab-pane.fade
+                                    img(src='img/category_decor14.jpg')
+                                #tab_lamination_3.tab-pane.fade
+                                    img(src='img/category_decor15.jpg')
+                                #tab_lamination_4.tab-pane.fade
+                                    img(src='img/category_decor16.jpg')
+                                #tab_lamination_5.tab-pane.fade
+                                    img(src='img/category_decor17.jpg')
+                                #tab_lamination_6.tab-pane.fade
+                                    img(src='img/category_decor18.jpg')
+                                #tab_lamination_7.tab-pane.fade
+                                    img(src='img/category_decor19.jpg')
+                                #tab_lamination_8.tab-pane.fade
+                                    img(src='img/category_decor20.jpg')
+                                #tab_lamination_9.tab-pane.fade
+                                    img(src='img/category_decor21.jpg')
+                                #tab_lamination_10.tab-pane.fade
+                                    img(src='img/category_decor22.jpg')
+                                #tab_lamination_11.tab-pane.fade
+                                    img(src='img/category_decor23.jpg')
+                                #tab_lamination_12.tab-pane.fade
+                                    img(src='img/category_decor24.jpg')
+                            .col-lg-6.col-12.text-left
+                                .block
+                                    p Вы слышали о шкале RAL? Это палитра, состоящая из более, чем 150 оттенков! Выберите любой, и мы сделаем для вас цветные окна — с одной или с двух сторон!
+                                h3 Выберите мышью любой цвет
+                                ul.nav.nav-tabs.d-flex.flex-wrap.justify-content-between.color-tablist
+                                    li.nav-item
+                                        a.nav-link.active(data-toggle="tab" href="#tab_lamination_1")
+                                            span.color(style="background-image: url('img/category_lamination_type1.png')")
+                                            span Орегон
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_2")
+                                            span.color(style="background-image: url('img/category_lamination_type2.png')")
+                                            span Темный дуб
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_3")
+                                            span.color(style="background-image: url('img/category_lamination_type3.png')")
+                                            span Дуб
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_4")
+                                            span.color(style="background-image: url('img/category_lamination_type4.png')")
+                                            span Черная вишня
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_5")
+                                            span.color(style="background-image: url('img/category_lamination_type5.png')")
+                                            span Шогун AD
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_6")
+                                            span.color(style="background-image: url('img/category_lamination_type6.png')")
+                                            span Табаско Тик
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_7")
+                                            span.color(style="background-image: url('img/category_lamination_type7.png')")
+                                            span Красная горная
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_8")
+                                            span.color(style="background-image: url('img/category_lamination_type8.png')")
+                                            span Коричневая горная
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_9")
+                                            span.color(style="background-image: url('img/category_lamination_type9.png')")
+                                            span Рустик
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_10")
+                                            span.color(style="background-image: url('img/category_lamination_type10.png')")
+                                            span Винчестер XD
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_11")
+                                            span.color(style="background-image: url('img/category_lamination_type11.png')")
+                                            span Винчестер XA
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_lamination_12")
+                                            span.color(style="background-image: url('img/category_lamination_type12.png')")
+                                            span Зеленая ель
+                                button(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+                        #tab_category_decor_3.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-lg-5.col-12.handle-wrap
+                                #handle
+                                    img(src='img/category/handle/silver/roto_line_standart.png')
+                                #background
+                                    img(src='img/category/background/pvx.png')
+                            .col-lg-6.col-12.text-left.offset-lg-1
+                                h3 Модель ручки:
+                                .d-flex.flex-column.flex-md-row
+                                    .model.active(data-model='line') ROTO Line
+                                    .model(data-model='samba') ROTO Samba
+                                    .model(data-model='swing') ROTO Swing
+                                h3 Вариант:
+                                .d-flex.flex-column.flex-md-row
+                                    .variant.active(data-variant='standart') Стандартный
+                                    .variant(data-variant='key') С ключем
+                                    .variant(data-variant='button') С кнопкой
+                                h3 Цвет:
+                                ul.d-flex.flex-wrap.justify-content-between#cc
+                                    li
+                                        span.color.active.bg-d7d3d0(data-color='silver')
+                                        span Серебро
+                                    li
+                                        span.color.bg-ae9048(data-color='bronze')
+                                        span Бронза
+                                    li
+                                        span.color.bg-423b35
+                                        span Коричневый
+                                    li
+                                        span.color.bg-dcc174
+                                        span Латунь
+                                    li
+                                        span.color.bg-776648
+                                        span Средняя бронза
+                                    li
+                                        span.color.bg-eaeaea(data-color='white')
+                                        span Белый
+                                    li
+                                        span.color.bg-d8cfc8
+                                        span Шампань
+                                    li
+                                        span.color.bg-b5b6b0(data-color='titan')
+                                        span Титан
+                                button(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+                        #tab_category_decor_4.tab-pane.fade.col-12.p-0.flex-wrap
+                            .col-lg-6.col-12(style="background-image: url('img/category_layout.png')")
+                            .col-lg-6.col-12.text-left
+                                h3 Ширина раскладки:
+                                .d-flex
+                                    .size.active 8 мм
+                                    .size 18 мм
+                                    .size 26 мм
+                                h3 Вариант рисунка:
+                                ul.variable.d-flex.flex-wrap.justify-content-between
+                                    li
+                                        img(src='img/category_layout_variable1.png')
+                                    li
+                                        img(src='img/category_layout_variable2.png')
+                                    li
+                                        img(src='img/category_layout_variable3.png')
+                                    li
+                                        img(src='img/category_layout_variable4.png')
+                                    li
+                                        img(src='img/category_layout_variable5.png')
+                                    li
+                                        img(src='img/category_layout_variable6.png')
+                                    li
+                                        img(src='img/category_layout_variable7.png')
+                                    li
+                                        img(src='img/category_layout_variable8.png')
+                                h3 Цветовая гамма:
+                                ul.d-flex.flex-wrap.justify-content-between
+                                    li
+                                        span.color.bg-eaeaea
+                                        span Белый
+                                    li
+                                        span.color.bg-ae9048
+                                        span Бронза
+                                    li
+                                        span.color.bg-423b35
+                                        span Коричневый
+                                    li
+                                        span.color.bg-dcc174
+                                        span Латунь
+                                    li
+                                        span.color.bg-776648
+                                        span Средняя бронза
+                                    li
+                                        span.color.bg-d7d3d0
+                                        span Серебро
+                                    li
+                                        span.color.bg-d8cfc8
+                                        span Шампань
+                                    li
+                                        span.color.bg-b5b6b0
+                                        span Титан
+                                button(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+
+
+
+
+                .row.option
+                    .badge(style="background-image: url('img/steps_badge.png')")
+                        | 5
+                    .col-12
+                        h2 Выберите дополнительные оконные опции
+                        .second-header.d-flex.align-items-center.justify-content-center(style="background-image: url('img/bg_header_category.png')") Все оконные опции для наших заказчиков по себестоимости!
+                    .col-12.d-flex.flex-wrap.items
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option1.png')
+                            p Отделка откосов
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option2.png')
+                            p Вентиляционный клапан
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option3.png')
+                            p Москитные сетки
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option4.png')
+                            p Водоотливы
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option5.png')
+                            p Детские замочки
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option6.png')
+                            p Ограничители открывания
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option7.png')
+                            p Витражи на стеклопакетах
+                        .col-lg-3.col-md-4.col-12.d-flex.flex-column.justify-content-between
+                            .cost 1 450 руб.
+                            div
+                                img(src='img/category_option8.png')
+                            p Жалюзи и рулонные шторы
+
+
+
+
+
+        .advantages(style="background-image: url('img/bg_steps.png')")
+            .container
+                .row
+                    .col-12
+                        h2
+                            | Покупайте только те окна,
+                            br
+                            span которые подходят именно вам!
+                    .col-12.d-flex.justify-content-between.flex-wrap
+                        .col-12.col-md-auto.col-lg-auto.d-flex.align-items-center.text-left
+                            img(src='img/advantages_1.svg' height="50px")
+                            p
+                                |Без переплат
+                                br
+                                | за&nbsp;ненужные&nbsp;опции!
+                        .col-12.col-md-auto.col-lg-auto.d-flex.align-items-center.text-left
+                            img(src='img/advantages_2.svg' height="50px")
+                            p
+                                |Решающие задачи, которые
+                                br
+                                | Вы перед ними ставите!
+                        .col-12.col-md-auto.col-lg-auto.d-flex.align-items-center.text-left
+                            img(src='img/advantages_3.svg' height="50px")
+                            p
+                                |Которые подходят под
+                                br
+                                | Ваш интерьер и нравятся Вам!
+                    .col-12.d-flex.justify-content-center
+                        button.consult(type="button" title="Бесплатная консультация специалиста" data-toggle="modal" data-target=".modal_consultation") Бесплатная консультация специалиста
+                        button.zamer(type="button" title="Вызов замерщика бесплатно" data-toggle="modal" data-target=".modal_measure") Вызов замерщика бесплатно
+
+
+        .windows_flat
+            .container-fluid.position-relative
+                .bg_1(style="background-image: url('img/bg_windows_flat.png')")
+                .container
+                    .row
+                        .col-xl-6.offset-xl-6.content.col-lg-7.offset-lg-5
+                            h2
+                                | Пластиковые окна
+                                br
+                                span В квартиру
+                            ul.nav.nav-tabs.d-flex.justify-content-between
+                                li.nav-item
+                                    a.nav-link.active(data-toggle="tab" href="#tab_win_1") 1-комнатная
+                                li.nav-item
+                                    a.nav-link(data-toggle="tab" href="#tab_win_2") 2-комнатная
+                                li.nav-item
+                                    a.nav-link(data-toggle="tab" href="#tab_win_3") 3-комнатная
+                            .row.no-gutters.tab-content
+                                #tab_win_1.tab-pane.active.col-12.flex-wrap
+                                    .col-12.col-md-6
+                                        p Комплектация:
+                                        ul
+                                            li Профиль: Rehau Euro
+                                            li Стеклопакет: Двухкамерный 24мм
+                                            li Фурнитура: ROTO NT
+                                            li Подоконник: ПВХ, белый
+                                    .col-12.col-md-6.pl-md-4.pl-0
+                                        p Размеры и конфигурация:
+                                        .d-flex.flex-wrap.pr-3.justify-content-between
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1300 x 1500 мм
+                                                div
+                                                    img(src='img/apartment1.png')
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1900 x 2200 мм
+                                                div
+                                                    img(src='img/apartment3.png')
+                                    .col-12.col-md-6.d-flex.flex-column.price
+                                        p Стоимость остекления:
+                                        span 27 980 руб.
+                                        span В рассрочку: 4 751 руб/мес.
+                                    .col-12.col-md-6.d-flex.align-items-center
+                                        button(type="button" title="Пригласить замерщика" data-toggle="modal" data-target=".modal_measure") Пригласить замерщика
+                                #tab_win_2.tab-pane.fade.col-12.flex-wrap
+                                    .col-12.col-md-6
+                                        p Комплектация:
+                                        ul
+                                            li Профиль: Rehau Euro
+                                            li Стеклопакет: Двухкамерный 24мм
+                                            li Фурнитура: ROTO NT
+                                            li Подоконник: ПВХ, белый
+                                    .col-12.col-md-6.pl-md-4.pl-0
+                                        p Размеры и конфигурация:
+                                        .d-flex.flex-wrap.pr-3.justify-content-between
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1300 x 1500 мм
+                                                div
+                                                    img(src='img/apartment1.png')
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1900 x 2200 мм
+                                                div
+                                                    img(src='img/apartment2.png')
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1900 x 2200 мм
+                                                div
+                                                    img(src='img/apartment3.png')
+                                    .col-12.col-md-6.d-flex.flex-column.price
+                                        p Стоимость остекления:
+                                        span 40 300 руб.
+                                        span В рассрочку: 6 716 руб/мес.
+                                    .col-12.col-md-6.d-flex.align-items-center
+                                        button(type="button" title="Пригласить замерщика" data-toggle="modal" data-target=".modal_measure") Пригласить замерщика
+                                #tab_win_3.tab-pane.fade.col-12.flex-wrap
+                                    .col-12.col-md-6
+                                        p Комплектация:
+                                        ul
+                                            li Профиль: Rehau Euro
+                                            li Стеклопакет: Двухкамерный 24мм
+                                            li Фурнитура: ROTO NT
+                                            li Подоконник: ПВХ, белый
+                                    .col-12.col-md-6.pl-md-4.pl-0
+                                        p Размеры и конфигурация:
+                                        .d-flex.flex-wrap.pr-3.justify-content-between
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1300 x 1500 мм
+                                                div
+                                                    img(src='img/apartment1.png')
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1300 x 1500 мм
+                                                div
+                                                    img(src='img/apartment1.png')
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1900 x 2200 мм
+                                                div
+                                                    img(src='img/apartment2.png')
+                                            .d-flex.flex-column.align-items-center.mb-3
+                                                span 1900 x 2200 мм
+                                                div
+                                                    img(src='img/apartment3.png')
+                                    .col-12.col-md-6.d-flex.flex-column.price
+                                        p Стоимость остекления:
+                                        span 50 950 руб.
+                                        span В рассрочку: 8 491 руб/мес.
+                                    .col-12.col-md-6.d-flex.align-items-center
+                                        button(type="button" title="Пригласить замерщика" data-toggle="modal" data-target=".modal_measure") Пригласить замерщика
+
+
+                form.container-fluid.position-relative
+                    .bg_2(style="background-image: url('img/bg_windows_flat_form.png')")
+                    .container
+                        .row
+                            .col-xl-6.offset-xl-6.content.col-lg-7.offset-lg-5
+                                h3 Узнайте стоимость окон по адресу!
+                                p Мы устанавливали окна практически в каждом доме Москвы и Московской области, поэтому знаем об особенностях остекления типовых многоэтажек все! Наши менеджеры в течении 10 минут сорентирубт вас по стоимости
+                                .d-flex.flex-wrap
+                                    input(type="text" placeholder="Введите адрес...")
+                                    .telephones
+                                        input(type="text" placeholder="Ваш телефон...")
+                                    .d-flex.but.align-items-center
+                                        button(type="button" title="Узнать") Узнать
+                                        label
+                                            input(type="checkbox" checked="checked")
+                                            | Согласие на обработку
+                                            br
+                                            | персональных данных
+
+        .house_flat
+            .container-fluid.position-relative
+                .bg_1(style="background-image: url('img/bg_house_flat.png')")
+                .container
+                    .row
+                        .col-xl-6.content.col-lg-7
+                            h2
+                                | Пластиковые окна
+                                br
+                                span В дом
+                            ul.nav.nav-tabs.d-flex.justify-content-between
+                                li.nav-item
+                                    a.nav-link.active(data-toggle="tab" href="#tab_house_1") Дача
+                                li.nav-item
+                                    a.nav-link(data-toggle="tab" href="#tab_house_2") Коттедж
+                                li.nav-item
+                                    a.nav-link(data-toggle="tab" href="#tab_house_3") Терраса, Веранда, Беседка
+                            .row.no-gutters.tab-content.d-flex.flex-column
+                                h3 Остекление дач
+                                #tab_house_1.tab-pane.active.flex-column.col-12
+                                    ul
+                                        li Окна и входные группы
+                                        li Выбор оконного профиля
+                                        li Подбор комплектации под заказчика
+                                        li Любой цвет и оформление окна
+                                #tab_house_2.tab-pane.fade.flex-column.col-12
+                                    ul
+                                        li Новый текст 2
+                                        li Новый текст 2
+                                        li Новый текст 2
+                                        li Новый текст 2
+                                #tab_house_3.tab-pane.fade.flex-column.col-12
+                                    ul
+                                        li Новый текст 3
+                                        li Новый текст 3
+                                        li Новый текст 3
+                                        li Новый текст 3
+                                h3 Размеры и конфигурация:
+                                .d-flex.justify-content-between.flex-wrap
+                                    .d-flex.align-items-end
+                                        img(src='img/apartment_house1.png')
+                                    .d-flex.align-items-end
+                                        img(src='img/apartment_house2.png')
+                                    .d-flex.align-items-end
+                                        img(src='img/apartment_house3.png')
+                                    .d-flex.align-items-end
+                                        img(src='img/apartment_house4.png')
+                                    .d-flex.align-items-end
+                                        img(src='img/apartment_house5.png')
+                                    .d-flex.align-items-end
+                                        img(src='img/apartment_house6.png')
+
+
+
+                form.container-fluid.position-relative
+                    .bg_2(style="background-image: url('img/bg_house_flat_form.png')")
+                    .container
+                        .row
+                            .col-xl-6.content.col-lg-7
+                                h3 Сделаем смету на остекление дома!
+                                p Сделаем точный расчет стоимости остекления Вашего загородного обьекта, Вы можете прикрепить чертежи или проектную документацию, наши специалисты оперативно сделают смету!
+                                .d-flex.flex-wrap
+                                    input(type="text" placeholder="Введите адрес...")
+                                    .telephones
+                                        input(type="text" placeholder="Ваш телефон...")
+                                    .d-flex.but.align-items-center
+                                        button(type="button" title="Узнать") Узнать
+                                        label Прикрепить чертеж
+                                            input(type="file")
+                                    label
+                                        input(type="checkbox" checked="checked")
+                                        | Согласие на обработку персональных данных
+        .bestprice
+            .container
+                .row
+                    .col-12
+                        h2 Лучшие цены на остекление в Москве и московской области!
+                        .second-header.d-flex.align-items-center.justify-content-center(style="background-image: url('img/bg_header_bestprice.png')") Почему заказывать окна у производителя напрямую выгодно? Сравните цены
+                    .col-12.d-flex.align-items-end.justify-content-center.diagramm(style="background-image: url('img/diagramm_arrow.png')")
+                        .col-auto
+                            .item_1
+                                span
+                                p Производитель
+                            p.price 3 715 руб.
+                        .col-auto
+                            .item_2
+                                span
+                                p Дилер
+                            p.price 3 931 руб.
+                        .col-auto
+                            .item_3
+                                span
+                                p Перекупщик
+                            p.price 4 097 руб.
+                        .col-auto
+                            .item_4
+                                span
+                                p Частный
+                                    br
+                                    | мастер
+                            p.price 4 211 руб.
+                        .col-auto
+                            .item_5
+                                span
+                                p Известный
+                                    br
+                                    | бренд
+                            p.price 4 305 руб.
+                        p.average_price
+                            |Средняя цена
+                            br
+                            |по рынку 2018
+
+
+
+        form.calculator#target_calc(style="background-image: url('img/bg_calculator.png')")
+            .container
+                .row
+                    .col-12
+                        h2
+                            | Рассчитайте стоимость окон
+                            br
+                            span со скидкой 40%!
+                    .col-12.d-flex.align-items-center.flex-wrap
+                        .col-xl-3.col-lg-4.offset-xl-1.col-12.d-flex.number
+                            p Выберите профиль REHAU:
+                                span 1
+                        .col-lg-8.col-md-11.offset-md-1.offset-lg-0.radio_button.flex-column.flex-md-row.align-items-start.align-items-md-center.offset-2
+                            input#radio1(type="radio" checked="checked" name="profile" value="Blitz")
+                            label(for="radio1") Blitz
+                            input#radio2(type="radio" name="profile" value="Euro")
+                            label(for="radio2") Euro
+                            input#radio3(type="radio" name="profile" value="Grazio")
+                            label(for="radio3") Grazio
+                            input#radio4(type="radio" name="profile" value="Delight")
+                            label(for="radio4") Delight
+                            input#radio5(type="radio" name="profile" value="Brillant")
+                            label(for="radio5") Brillant
+                            input#radio6(type="radio" name="profile" value="Geneo")
+                            label(for="radio6") Geneo
+                            input#radio7(type="radio" name="profile" value="Intelio")
+                            label(for="radio7") Intelio
+                    .col-12.d-flex.align-items-center.flex-wrap
+                        .col-xl-3.offset-xl-1.col-lg-4.col-12.d-flex.number
+                            p Выберите стеклопакет:
+                                span 2
+                        .col-lg-8.col-md-11.offset-md-1.offset-lg-0.radio_button.justify-content-between.justify-content-md-start.flex-wrap.flex-md-nowrap.offset-2
+                            input#radio8(type="radio" checked="checked" name="glazing" value="Однокамерный")
+                            label(for="radio8") Однокамерный
+                            input#radio9(type="radio" name="glazing" value="Двухкамерный")
+                            label(for="radio9") Двухкамерный
+                            input#radio10(type="radio" name="glazing" value="Энергосберегающий")
+                            label(for="radio10") Энергосберегающий
+                    .col-12.d-flex.flex-wrap.flex-lg-nowrap
+                        .col-xl-3.offset-xl-1.col-lg-4.d-flex.number.col-12
+                            p Выберите тип окна:
+                                span 3
+                        .col-lg-8.offset-md-1.offset-lg-0.pr-md-0.radio_button.offset-3.flex-wrap.flex-md-nowrap
+                            .type.d-flex.flex-column
+                                p Одностворчатое
+                                div
+                                    img(src="img/calculator_img1.png")
+                                div(style="background-image: url('img/bg_calculator_dop.png')")
+                                    input#radio11(type="checkbox" checked="checked" name="type" value="Одностворчатое")
+                                    label(for="radio11") выбрать
+                            .type.d-flex.flex-column
+                                p Двухстворчатое
+                                div
+                                    img(src="img/calculator_img2.png")
+                                div(style="background-image: url('img/bg_calculator_dop.png')")
+                                    input#radio12(type="checkbox" name="type" value="Двухстворчатое")
+                                    label(for="radio12") выбрать
+                            .type.d-flex.flex-column
+                                p Трехстворчатое
+                                div
+                                    img(src="img/calculator_img3.png")
+                                div(style="background-image: url('img/bg_calculator_dop.png')")
+                                    input#radio13(type="checkbox" name="type" value="Трехстворчатое")
+                                    label(for="radio13") выбрать
+                            .type.d-flex.flex-column
+                                p Балконный блок
+                                div
+                                    img(src="img/calculator_img4.png")
+                                div(style="background-image: url('img/bg_calculator_dop.png')")
+                                    input#radio14(type="checkbox" name="type" value="Балконный блок")
+                                    label(for="radio14") выбрать
+                    .col-12.d-flex.align-items-center.flex-wrap.flex-lg-nowrap
+                        .col-xl-3.offset-xl-1.col-lg-4.d-flex.number.col-12
+                            p Выберите подоконник:
+                                span 4
+                        .col-lg-8.offset-md-1.offset-lg-0.radio_button.offset-2.flex-column.flex-md-row.align-items-start.align-items-md-center
+                            input#radio15(type="radio" checked="checked" name="sill" value="Vitrage")
+                            label(for="radio15") Vitrage
+                            input#radio16(type="radio" name="sill" value="Moller")
+                            label(for="radio16") Moller
+                            input#radio17(type="radio" name="sill" value="Деревянный")
+                            label(for="radio17") Деревянный
+                            input#radio18(type="radio" name="sill" value="Каменный")
+                            label(for="radio18") Каменный
+                    .col-12.d-flex.align-items-center.flex-wrap.flex-lg-nowrap
+                        .col-xl-3.offset-xl-1.col-lg-4.col-md-6.d-flex.number.col-12
+                            p Нужна отделка откосов?
+                                span 5
+                        .col-8.radio_button.offset-2.offset-md-1.offset-lg-0
+                            input#radio19(type="radio" checked="checked" name="finish" value="Да")
+                            label(for="radio19") Да
+                            input#radio20(type="radio" name="finish" value="Нет")
+                            label(for="radio20") Нет
+                    .col-12.d-flex.align-items-center.flex-wrap.flex-lg-nowrap
+                        .col-xl-3.offset-xl-1.col-lg-4.col-md-6.d-flex.number.col-12
+                            p Хотите цветный окна?
+                                span 6
+                        .col-8.radio_button.offset-2.offset-md-1.offset-lg-0
+                            input#radio21(type="radio" checked="checked" name="colored" value="Да")
+                            label(for="radio21") Да
+                            input#radio22(type="radio" name="colored" value="Нет")
+                            label(for="radio22") Нет
+
+            .container-fluid(style="background-image: url('img/bg_calculator_dop.png')")
+                .container
+                    .row
+                        .col-12.d-flex.justify-content-center
+                            input(type="text" placeholder="Введите имя...")
+                            .telephones
+                                input(type="text" placeholder="Ваш телефон...")
+                            .d-flex.flex-column
+                                button(type="button" title="Отправить заявку на расчет" data-toggle="modal" data-target=".modal_request") Отправить заявку на расчет
+                                label
+                                    input(type="checkbox" checked="checked")
+                                    |Согласие на обработку персональных данных
+
+        .installments(style="background-image: url('img/bg_installments.png')")
+            .container
+                .row.d-flex.align-items-center
+                    .col-auto
+                        h2
+                            |Рассрочка на остекление
+                            br
+                            span Без переплат
+                    .col-auto.d-flex.flex-column.align-items-end
+                        p Предоплата:
+                            //span 0 руб.
+                        p Первый платеж:
+                            //span через месяц
+                        p Срок:
+                            //span 6, 12 месяцев
+                    .col-auto.d-flex.flex-column
+                        span.text 0 руб.
+                        span.text через месяц
+                        span.text 6, 12 месяцев
+
+
+
+
+        .mobile_office
+            .container
+                .row
+                    .col-12
+                        h2 Мобильный офис - все для нашего удобства!
+                    .col-12.d-flex.justify-content-between.flex-wrap
+                        .col-12.col-md-auto.col-lg-auto.d-flex.flex-column.align-items-center
+                            img(src='img/mobile_office_1.svg' height="65px")
+                            p
+                                | Вам не обязательно приезжать в офис для
+                                br
+                                | заключения договора! Оставьте заявку на
+                                br
+                                | сайте или позвоните нам!
+                        .col-12.col-md-auto.col-lg-auto.d-flex.flex-column.align-items-center
+                            img(src='img/mobile_office_2.svg' height="65px")
+                            p
+                                | К Вам приедет замерщик, произведет
+                                br
+                                | замеры, ответит на все ваши вопросы,
+                                br
+                                | оформит договор и отправит окна
+                                br
+                                | в производство.
+                        .col-12.col-md-auto.col-lg-auto.d-flex.flex-column.align-items-center
+                            img(src='img/principles_4.svg' height="65px")
+                            p
+                                | В оговоренный день вам доставят готовые
+                                br
+                                | окна, монтажники демонтируют старые и
+                                br
+                                | установят новые. Уберут весь мусор и
+                                br
+                                | вручат гарантийную документацию!
+
+        .form_gager(style="background-image: url('img/bg_steps.png')")
+            .container
+                .row
+                    .col-12
+                        form.d-flex.justify-content-center
+                            input(type="text" placeholder="Введите имя...")
+                            .telephones
+                                input(type="text" placeholder="Ваш телефон...")
+                            .d-flex.flex-column
+                                button(type="button" title="Пригласить замерщика" data-toggle="modal" data-target=".modal_measure") Пригласить замерщика
+                                label
+                                    input(type="checkbox" checked="checked")
+                                    |Согласие на обработку персональных данных
+
+        .pay
+            .container
+                .row
+                    .col-12
+                        h2 Вы можете оплатить наши услуги
+                    .col-12.d-flex.justify-content-between.flex-wrap
+                        .col-12.col-md-auto.col-lg-4.offset-lg-2.offset-xl-0.col-xl-auto.d-flex.align-items-center.text-left
+                            img(src='img/pay_1.svg' height="50px" width="50px")
+                            p
+                                | Наличиные
+                        .col-12.col-md-auto.col-lg-5.offset-lg-1.offset-xl-0.col-xl-auto.mt-5.mt-md-0.d-flex.align-items-center.text-left
+                            img(src='img/pay_2.svg' height="50px" width="50px")
+                            p
+                                | Банковская&nbsp;карта
+                        .col-12.col-md-auto.col-lg-4.offset-lg-2.mt-5.mt-xl-0.offset-xl-0.col-xl-auto.d-flex.align-items-center.text-left
+                            img(src='img/pay_3.svg' height="50px" width="50px")
+                            p
+                                | Безналичный расчет
+                        .col-12.col-md-auto.col-lg-5.offset-lg-1.mt-5.mt-xl-0.offset-xl-0.col-xl-auto.d-flex.align-items-center.text-left
+                            img(src='img/pay_4.svg' height="50px" width="50px" style='margin-right:15px;')
+                            p
+                                | Электронный платеж
+
+
+        .faq(style="background-image: url('img/bg_faq.png')")
+            .container
+                .row
+                    .col-12
+                        h2 Часто задаваемые вопросы
+                    .col-12
+                        .row.justify-content-between
+                            .col-xl-auto.col-lg-6.col-md-12.answer
+                                ul.text-left.flex-column.nav.nav-tabs
+                                    li.nav-item
+                                        a.nav-link.active(data-toggle="tab" href="#tab_1") Вы работаете только с Rehau?
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_2") Монтаж окон входит в стоимость?
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_3") Вы осуществляете доставку за город?
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_4") Сколько по времени длится установка окон?
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_5") При установке окон могут пострадать мои вещи: мебель, бытовая техника?
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_6") Вы увозите старые окна или нужно выбрасывать самим?
+                                    li.nav-item
+                                        a.nav-link(data-toggle="tab" href="#tab_7") Какая гарантия на окна?
+                            .tab-content.col-xl-4.col-lg-5.col-md-12.text-left
+                                #tab_1.tab-pane.active
+                                    p Да, мы работаем только с немецким профилем Rehau, который хорошо зарекомендовал себя на рынке остекления в России. наша компания является сертифицированным партнером Rehau.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Поэтому — только Rehau! только немецкое качество!
+                                #tab_2.tab-pane.fade
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Да, мы работаем только с немецким профилем Rehau, который хорошо зарекомендовал себя на рынке остекления в России. наша компания является сертифицированным партнером Rehau.
+                                    p Поэтому — только Rehau! только немецкое качество!
+                                #tab_3.tab-pane.fade
+                                    p Поэтому — только Rehau! только немецкое качество!
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Да, мы работаем только с немецким профилем Rehau, который хорошо зарекомендовал себя на рынке остекления в России. наша компания является сертифицированным партнером Rehau.
+                                #tab_4.tab-pane.fade
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                #tab_5.tab-pane.fade
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                #tab_6.tab-pane.fade
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                #tab_7.tab-pane.fade
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                                    p Мы даем фирменную расширенную гарантию на оконные конструкции, поэтому предпочитаем не экономить на качестве.
+                    .col-12
+                        p.title Остались еще вопросы?
+                    .col-12
+                        button(type="button" title="Спросите у нашего специалиста!" data-toggle="modal" data-target=".modal_consultation") Спросите у нашего специалиста!
+
+
+        .video
+            .container
+                .row
+                    .col-12
+                        h2 Инновационное производство
+                        p позволяет нам обрабатывать большие обьемы заказов
+                            br
+                            |  в короткие сроки и предлагать лучшие цены
+            .container
+                    .col-12
+                        .item.d-flex.flex-column.align-items-center(style="background-image: url('img/video_img.png')")
+                            p.title Миссия компании ОкнаСтрит
+                            span Мы ставим перед собой задачу не просто нести тепло и уют в Ваши дома.
+                                br
+                                | Прежде всего мы хотим помочь Вам сделать осознанный, а, значит,
+                                br
+                                | правильный выбор при заказе остекления
+                            a(data-fancybox href="https://www.youtube.com/watch?v=h2Toze_2mps")
+                                img(src='img/play.png')
+                            span.videoplay Смотреть видео
+                                br
+                                | О работе компании
+
+
+        .testimonial(style="background-image: url('img/bg_testimonial.png')")
+            .container
+                .row
+                    .col-12
+                        h2 Отзывы заказчиков
+                        p о сотрудничестве с нами
+                    .slider_testimonial.owl-carousel.owl-theme
+                        .item
+                            .photo(style="background-image: url('img/bg_testimonial_photo.png')")
+                                img(src='img/testimonial_photo.png')
+                                p Маргарита Дерюгина
+                                span г. Москва
+                            .recall_wrap(style="background-image: url('img/quotes.png')")
+                                .title
+                                    p
+                                        | Остекление квартиры:
+                                        span  5 окон и балконный блок
+                                .recall
+                                    p 02/10/2014 нам установили окна по адресу ул.Теплый Стан, д.17. работу выполнил Крафт Дмитрий. Хочется отметить высокий профессионализм и ответственность за свою работу данного работника. Приятно смотреть на четко отлаженные действия мастера, все делает быстро и четко, не в ущерб качеству. Побольше бы таких мастеров. Рекомендую компанию желающим установить окна.
+                                    .d-flex.stars
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png')
+                                        img(src='img/star.png' )
+                        .item
+                            .photo(style="background-image: url('img/bg_testimonial_photo.png')")
+                                img(src='img/testimonial_photo.png')
+                                p Маргарита Дерюгина
+                                span г. Москва
+                            .recall_wrap(style="background-image: url('img/quotes.png')")
+                                .title
+                                    p
+                                        | Остекление квартиры:
+                                        span  5 окон и балконный блок
+                                .recall
+                                    p 02/10/2014 нам установили окна по адресу ул.Теплый Стан, д.17. работу выполнил Крафт Дмитрий. Хочется отметить высокий профессионализм и ответственность за свою работу данного работника. Приятно смотреть на четко отлаженные действия мастера, все делает быстро и четко, не в ущерб качеству. Побольше бы таких мастеров. Рекомендую компанию желающим установить окна.
+                                    .d-flex.stars
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png')
+                                        img(src='img/star.png' )
+                        .item
+                            .photo(style="background-image: url('img/bg_testimonial_photo.png')")
+                                img(src='img/testimonial_photo.png')
+                                p Маргарита Дерюгина
+                                span г. Москва
+                            .recall_wrap(style="background-image: url('img/quotes.png')")
+                                .title
+                                    p
+                                        | Остекление квартиры:
+                                        span  5 окон и балконный блок
+                                .recall
+                                    p 02/10/2014 нам установили окна по адресу ул.Теплый Стан, д.17. работу выполнил Крафт Дмитрий. Хочется отметить высокий профессионализм и ответственность за свою работу данного работника. Приятно смотреть на четко отлаженные действия мастера, все делает быстро и четко, не в ущерб качеству. Побольше бы таких мастеров. Рекомендую компанию желающим установить окна.
+                                    .d-flex.stars
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png' )
+                                        img(src='img/star.png')
+                                        img(src='img/star.png' )
+
+
+        .photogallery
+            .container
+                .row
+                    .col-12
+                        h2 Фотогалерея
+                        p Некоторые работы за 2018 год
+                    .slider_photo.owl-carousel.owl-theme
+                        .item
+                            .image(style="background-image: url('img/photogallery_1.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_1.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_2.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_2.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_3.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_3.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_1.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_1.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_2.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_2.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_3.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_3.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_1.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_1.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_2.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_2.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+                        .item
+                            .image(style="background-image: url('img/photogallery_3.png')")
+                            .zoom(style="background-image: url('img/photogallery_hover.png')" href="img/photogallery_3.png" data-fancybox="images")
+                                img(src='img/zoom.svg' height="40px" width="45px")
+
+        .separator(style="background-image: url('img/bg_steps.png')")
+            .container
+                .row
+                    .col-12
+                        h2
+                            | Хотите так же? Будет лучше!
+                            br
+                            span Записывайтесь на замер и экономьте на окнах, но не качестве!
+
+
+        .footer_banner(style="background-image: url('img/bg_footer_banner.png')")
+            .man
+                img(src='img/bg_footer_banner_man.png')
+            .container
+                .row.justify-content-lg-between.align-items-center.justify-content-center
+                    .col-auto.text-center
+                        h2
+                            |-40%
+                            br
+                            span На окна Rehau
+                            .action
+                                |Акция
+                                br
+                                |в июле
+                        .timer_block
+                            p Осталось
+                            #CDT
+                        p.eco
+                            | Успей сэкономить
+                            br
+                            | этим летом
+                    .col-auto
+                        .nameplate
+                            p
+                                | Запишитесь сегодня
+                                br
+                                | на бесплатный замер
+                            form.d-flex.justify-content-center.flex-column
+                                input(type="text" placeholder="Ваше имя...")
+                                .telephones
+                                    input(type="text" placeholder="Ваш телефон...")
+                                .d-flex.flex-column
+                                    button(type="button" title="Вызвать замерщика" data-toggle="modal" data-target=".modal_measure") Вызвать замерщика!
+                                        br
+                                        span И получить скидку 40%
+                                    label
+                                        input(type="checkbox" checked="checked")
+                                        | Согласие на обработку персональных данных
+
+
+        .map
+            .container
+                .row
+                    .col-12
+                        h2 Как нас найти
+                        p
+                            | В офисах компании вы можете посмотреть все образцы продукции
+                            br
+                            | и проконсультироваться со специалистами
+            .container
+                .row
+                    .col-12.d-flex.justify-content-between.flex-wrap
+                        .left_col
+                            .map_block
+                                script(charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=bThSPLEKAbkd2DYDWVu8N9hnyXoKtS0c&height=355&lang=ru_RU&sourceType=constructor" type="text/javascript")
+                            span г. Москва, ул.Угрешская, д.2 (тендеры)
+                        .right_col
+                            .map_block
+                                script(charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=PZok3JxEm_nLdBBRjLDx6dITEfKAYzG0&height=355&lang=ru_RU&sourceType=constructor" type="text/javascript")
+                            span г. Дзержинский МО, ул. Угрешская 15A, 421 (клиентский отдел)
+
+
+
+
+
+        .brands.block
+            .container
+                ul.brands-wrap
+                    li
+                        img(src="img/item1.jpg" alt="партнеры")
+                    li
+                        img(src="img/item2.jpg" alt="партнеры")
+                    li
+                        img(src="img/item3.jpg" alt="партнеры")
+                    li
+                        img(src="img/item4.jpg" alt="партнеры")
+                    li
+                        img(src="img/item5.jpg" alt="партнеры")
+                    li
+                        img(src="img/item6.jpg" alt="партнеры")
+                    li
+                        img(src="img/item7.jpg" alt="партнеры")
+
+        footer.footer.block
+            .container
+                .foot-col.num1
+                    .footblock.copyright
+                        |© 2019 OKNASTREET
+                        br
+                        |Все виды остекления в Москве
+                        br
+                        |и в Московской области
+                        br
+                    .footblock
+                        .footblock-title Наши адреса:
+                        .foot-adr
+                            |г. Москва, ул. Угрешская, д.2
+                            br
+                            |(работа с тендерами)
+                        .foot-adr
+                            |Московская область,
+                            br
+                            |г. Дзержинский, ул. Угрешская 15А, офис 421
+                            br
+                            |(клиентский отдел)
+                        a.all-adr(href="kontaktyi.html" title="Все адреса компании") Все адреса компании
+                .foot-col.num2.withborder
+                    .footblock
+                        .foot-workhours
+                            |Работаем с 9:00 до 21:00
+                            br
+                            |Без выходных
+                    .footblock
+                        .footblock-title Телефоны:
+                        .foot-phones
+                            |8 (495) 369-61-59 многоканальный
+                            br
+                            |8 (495) 589-44-74 контроль&nbsp;качества
+                    .footblock
+                        .footblock-title Почта:
+                        a.foot-email(href="mailto:mail@oknastreet.ru" title="Напишите нам") mail@oknastreet.ru
+                    .footblock
+                        .social
+                            .footblock-title здесь Мы дружим:
+                            ul
+                                li
+                                    a.vk(rel="nofollow" target="_blank" href="https://vk.com/oknastreet" title="Вконтакте") Вконтакте
+                                li
+                                    a.fb(rel="nofollow" target="_blank" href="https://www.facebook.com/oknastreet.ru" title="Facebook") Facebook
+                                li
+                                    a.goo(rel="nofollow" target="_blank" href="https://plus.google.com/b/113853639960692794055/+OknastreetRu123/posts" title="Google+") Google+
+                                li
+                                    a.pp(rel="nofollow" target="_blank" href="https://www.pinterest.com/oknastreet/" title="Pinterest") Pinterest
+                                li
+                                    a.insta(rel="nofollow" target="_blank" href="https://www.instagram.com/okna_street/" title="Instagram") Instagram
+                .foot-col.num3
+                    .footblock
+                        .footblock-title Продукция:
+                        ul.menu
+                            li.first
+                                a(href="products/plastikovye-okna.html") Пластиковые окна
+                            li
+                                a(href="products/derevyannyie-okna.html") Деревянные окна
+                            li
+                                a(href="products/okna-iz-steklokompozita.html") Окна из стеклокомпозита
+                            li
+                                a(href="products/osteklenie-balkonov-i-lodzhij.html") Остекление балконов и лоджий
+                            li
+                                a(href="products/vhodnye-gruppy-dveri.html") Входные группы и двери
+                            li
+                                a(href="products/dver-na-balkon.html") Балконные двери
+                            li
+                                a(href="products/razdvizhnye-dveri-portaly.html") Раздвижные окна и двери
+                            li
+                                a(href="products/thermo-glass-windows.html") Окна с подогревом
+                            li
+                                a(href="products/jenergosberegajushhie-okna.html") Энергосберегающие окна
+                            li
+                                a(href="products/bezramnoe-osteklenie.html") Безрамное остекление
+                            li
+                                a(href="products/aljuminievye-konstrukcii.html") Алюминиевые конструкции
+                            li
+                                a(href="products/fasadnoe-osteklenie.html") Фасадное остекление
+                            li
+                                a(href="products/ofisnie-peregorodki.html") Офисные перегородки
+                            li
+                                a(href="products/rolstavni.html") Рольставни
+                            li
+                                a(href="products/rulonnye-shtory-zhaljuzi.html") Рулонные шторы и жалюзи
+                            li
+                                a(href="products/osteklenie-kottedzhej.html") Остекление загородного дома
+                            li
+                                a(href="products/osteklenie-kvartir.html") Остекление квартир
+                            li
+                                a(href="products/osteklenie-verandy.html") Остекление веранд и беседок
+                            li.last
+                                a(href="products/panoramnye-okna.html") Панорамные окна
+                .foot-col.num4
+                    .footblock
+                        .footblock-title Стоимость:
+                        ul.menu
+                            li.first
+                                a(href="stoimost-new/kalkuljator-plastikovyh-okon.html") Калькулятор пластиковых окон
+                            li
+                                a(href="stoimost-new/kalkuljator-balkonov.html") Калькулятор балконов
+                            li
+                                a(href="stoimost-new/kalkuljator-derevjannyh-okon.html") Калькулятор деревянных окон
+                            li
+                                a(href="stoimost-new/plastikovye-okna-ceny.html") Стоимость окон в типовых домах
+                            li
+                                a(href="stoimost-new/ceni-ostekleniya-balkonov-1.html") Цены на балконы в типовых домах
+                            li
+                                a(href="stoimost-new/plastikovye-okna-rassrochka.html") Окна в рассрочку
+                            li
+                                a(href="stoimost-new/plastikovye-okna-bez-predoplaty.html") Окна без предоплаты
+                            li
+                                a(href="stoimost-new/sposoby-oplaty.html") Способы оплаты
+                            li
+                                a(href="stoimost-new/qiwi.html") Оплата через систему QIWI
+                            li
+                                a(href="stoimost-new/oplata-bankovskoj-kartoj.html") Оплата банковской картой
+                            li.last
+                                a(href="stoimost-new/otkaz-ot-uslugi.html") Правила отказа от услуги
+                        a.payments-link(href="/stoimost-new/oplata-bankovskoj-kartoj.html" title="Способы оплаты")
+                            img.img-responsive.payments-img(src="img/payments.png" alt="Способы оплаты" width="252" height="34")
+                .foot-col.num5
+                    .footblock
+                        .footblock-title Услуги и сервис:
+                        ul.menu
+                            li.first
+                                a(href="uslugi-i-servis-new/zamer.html") Замер
+                            li
+                                a(href="uslugi-i-servis-new/dostavka.html") Доставка
+                            li
+                                a(href="uslugi-i-servis-new/ustanovka.html") Монтаж
+                            li
+                                a(href="uslugi-i-servis-new/obsluzhivanie-okon.html") Сервисное обслуживание
+                            li.last
+                                a(href="uslugi-i-servis-new/remont-plastikovyh-okon.html") Ремонт
+
+
+
+
+
+
+        include modules/scripts.pug

@@ -1,0 +1,20 @@
+.modal_consultation.modal.fade(tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content
+            button.close-popup(type="button" data-dismiss="modal" aria-label="Close")
+            .modal-body
+                p Нужна консультация специалиста?
+                p.desc Оставьте свой телефон, в течении 15 минут с Вами свяжется наш специалист и ответит на все вопросы по остеклению. Можете так же прикрепить файлы и задать свой вопрос в комментарии!
+                form
+                    input(type="text" placeholder="Ваше имя...")
+                    .telephones
+                        input(type="text" placeholder="Ваш телефон...")
+                    textarea
+                    .d-flex.flex-column.align-items-center
+                        span.dop Добавить комментарий
+                        label Прикрепить файлы
+                            input(type="file")
+                    input(type="submit" value="Проконсультироваться!")
+                    .d-flex.justify-content-center
+                        label.personal Согласие на обработку персональных данных
+                            input(type="checkbox" checked="checked")

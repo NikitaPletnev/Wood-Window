@@ -1,0 +1,20 @@
+.modal_request.modal.fade(tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content
+            button.close-popup(type="button" data-dismiss="modal" aria-label="Close")
+            .modal-body
+                p Заявка на расчет стоимости
+                p.desc Заполните форму обратной связи! При необходимости, приложите чертежи или файлы, укажите размеры оконных проемов и количество окон в комментарии. Наш специалист за 15 минут сделает экспресс-расчет и свяжется с Вами!
+                form
+                    input(type="text" placeholder="Ваше имя...")
+                    .telephones
+                        input(type="text" placeholder="Ваш телефон...")
+                    textarea
+                    .d-flex.flex-column.align-items-center
+                        span.dop Добавить комментарий
+                        label Прикрепить файлы
+                            input(type="file")
+                    input(type="submit" value="Расчитать со скидкой 40%!")
+                    .d-flex.justify-content-center
+                        label.personal Согласие на обработку персональных данных
+                            input(type="checkbox" checked="checked")
