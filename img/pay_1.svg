@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 62" style="enable-background:new 0 0 64 62;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#4ac54a;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<title>sq 141, wallet, money, cash, credit card, coin, income, purse</title>
+<g>
+	<g>
+		<path class="st0" d="M49,47.5V61H3c-1.1,0-2-0.9-2-2l0,0V25"/>
+		<path class="st0" d="M6,23H3c-1.1,0-2,0.9-2,2l0,0c0,1.1,0.9,2,2,2h46v14.3"/>
+		<g>
+			<circle class="st0" cx="38" cy="22" r="5"/>
+			<line class="st0" x1="50.1" y1="22" x2="48.5" y2="22"/>
+			<line class="st0" x1="53.3" y1="22" x2="51.7" y2="22"/>
+			<line class="st0" x1="24.3" y1="22" x2="22.7" y2="22"/>
+			<line class="st0" x1="27.5" y1="22" x2="25.9" y2="22"/>
+			<path class="st0" d="M63,17h-4l-2-2v-4"/>
+			<polyline class="st0" points="52.1,34 63,34 63,11 13,11 13,26.9 			"/>
+			<circle class="st0" cx="38" cy="22" r="5"/>
+			<line class="st0" x1="50.1" y1="22" x2="48.5" y2="22"/>
+			<line class="st0" x1="53.3" y1="22" x2="51.7" y2="22"/>
+			<line class="st0" x1="24.3" y1="22" x2="22.7" y2="22"/>
+			<line class="st0" x1="27.5" y1="22" x2="25.9" y2="22"/>
+			<path class="st0" d="M13,17h4l2-2v-4"/>
+		</g>
+		<g>
+			<path class="st0" d="M46,11V2c0-0.6-0.4-1-1-1H10C9.4,1,9,1.4,9,2v22"/>
+			<line class="st0" x1="42" y1="4" x2="42" y2="6"/>
+			<line class="st0" x1="13" y1="4" x2="13" y2="6"/>
+		</g>
+	</g>
+	<rect x="42" y="41" class="st0" width="8" height="6"/>
+</g>
+<line class="st0" x1="48" y1="7" x2="61" y2="7"/>
+<line class="st0" x1="20" y1="44" x2="22" y2="44"/>
+<line class="st0" x1="24" y1="44" x2="26" y2="44"/>
+<line class="st0" x1="28" y1="44" x2="30" y2="44"/>
+<line class="st0" x1="44" y1="31" x2="46" y2="31"/>
+<line class="st0" x1="44" y1="57" x2="46" y2="57"/>
+</svg>
